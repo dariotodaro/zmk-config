@@ -105,6 +105,7 @@
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |        |  RGB  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |        | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
+            display-name = "todd"
             bindings = <
 &kp GRAVE  &kp N1  &kp N2            &kp N3    &kp N4            &kp N5                           &kp N6  &kp N7             &kp N8     &kp N9             &kp N0    &kp MINUS
 &kp ESC    &kp Q   &kp W             &kp E     &kp R             &kp T                            &kp Y   &kp U              &kp I      &kp O              &kp P     &kp BSPC
@@ -127,7 +128,7 @@
             // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
-            display-name = "lower⬇";
+            display-name = "lower";
             bindings = <
 &trans     &kp F1     &kp F2     &kp F3       &kp F4    &kp F5                              &kp F6     &kp F7    &kp F8           &kp F9     &kp F10   &kp F11
 &kp GRAVE  &kp N1     &kp N2     &kp N3       &kp N4    &kp N5                              &kp N6     &kp N7    &kp N8           &kp N9     &kp N0    &kp F12
@@ -149,7 +150,7 @@
             // |     | UNDO | CUT  | COPY  | PASTE |      |      |   | ExtPw|      |      |       |      |       |       |
             //              |      |       |       |      |      |   |      |      |      |       |      |
 
-            display-name = "raise⬆";
+            display-name = "raise";
             bindings = <
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                               &trans     &trans    &trans    &trans     &trans    &trans
 &trans  &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                                     &kp PG_UP  &trans    &kp UP    &trans     &kp HOME  &kp END
