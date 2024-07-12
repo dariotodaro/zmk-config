@@ -73,8 +73,8 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 
@@ -111,12 +111,23 @@
 &kp ESC     &kp Q   &kp W             &kp E     &kp R             &kp T                              &kp Y   &kp U              &kp I      &kp O              &kp P     &kp BSPC
 &kp TAB     &kp A   &kp S             &kp D     &kp F             &kp G                              &kp H   &kp J              &kp K      &kp L              &kp SEMI  &kp SQT
 &kp LSHFT   &kp Z   &kp X             &kp C     &kp V             &kp B   &kp C_PLAY    &kp LA(TAB)  &kp N   &kp M              &kp COMMA  &kp DOT            &kp FSLH  &kp RSHFT
-                    &kp LEFT_CONTROL  &kp LALT  &kp LEFT_COMMAND  &mo 1   &kp RET       &kp SPACE    &mo 2   &kp RIGHT_COMMAND  &kp LALT   &kp RIGHT_CONTROL
+                    &kp LEFT_CONTROL  &kp LALT  &kp LEFT_COMMAND  &mo 2   &kp RET       &kp SPACE    &mo 3   &kp RIGHT_COMMAND  &kp LALT   &kp RIGHT_CONTROL
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
                 <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
+        };
+
+        windows {
+            display-name = "windows";
+            bindings = <
+&kp ESCAPE  &kp N1  &kp N2            &kp N3    &kp N4            &kp N5                             &kp N6  &kp N7             &kp N8     &kp N9             &kp N0    &kp DEL
+&kp ESC     &kp Q   &kp W             &kp E     &kp R             &kp T                              &kp Y   &kp U              &kp I      &kp O              &kp P     &kp BSPC
+&kp TAB     &kp A   &kp S             &kp D     &kp F             &kp G                              &kp H   &kp J              &kp K      &kp L              &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z   &kp X             &kp C     &kp V             &kp B   &kp C_PLAY    &kp LA(TAB)  &kp N   &kp M              &kp COMMA  &kp DOT            &kp FSLH  &kp RSHFT
+                    &kp LEFT_COMMAND  &kp LALT  &kp LEFT_CONTROL  &mo 2   &kp RET       &kp SPACE    &mo 3   &kp RIGHT_CONTROL  &kp LALT   &kp RIGHT_COMMAND
+            >;
         };
 
         LOW {
@@ -172,27 +183,12 @@
 
             display-name = "adjust";
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &to 0  &to 4  &none  &none  &none  &none
+&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &to 0  &to 1  &none  &none  &none  &none
 &ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none  &none  &none  &none  &none  &none
 &none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_EFR                            &none  &none  &none  &none  &none  &none
 &none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none  &none
                                     &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
             >;
-        };
-
-        windows {
-            display-name = "windows";
-            bindings = <
-&kp ESCAPE  &kp N1  &kp N2            &kp N3    &kp N4            &kp N5                             &kp N6  &kp N7             &kp N8     &kp N9             &kp N0    &kp DEL
-&kp ESC     &kp Q   &kp W             &kp E     &kp R             &kp T                              &kp Y   &kp U              &kp I      &kp O              &kp P     &kp BSPC
-&kp TAB     &kp A   &kp S             &kp D     &kp F             &kp G                              &kp H   &kp J              &kp K      &kp L              &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z   &kp X             &kp C     &kp V             &kp B   &kp C_PLAY    &kp LA(TAB)  &kp N   &kp M              &kp COMMA  &kp DOT            &kp FSLH  &kp RSHFT
-                    &kp LEFT_COMMAND  &kp LALT  &kp LEFT_CONTROL  &mo 1   &kp RET       &kp SPACE    &mo 2   &kp RIGHT_CONTROL  &kp LALT   &kp RIGHT_COMMAND
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
         };
     };
 };
