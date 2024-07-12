@@ -116,7 +116,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
+                <&inc_dec_kp LG(LS(TAB)) LG(TAB)>;
         };
 
         windows {
@@ -128,6 +128,10 @@
 &kp LSHFT   &kp Z   &kp X             &kp C     &kp V             &kp B   &kp C_PLAY    &kp LA(TAB)  &kp N   &kp M              &kp COMMA  &kp DOT            &kp FSLH  &kp RSHFT
                     &kp LEFT_COMMAND  &kp LALT  &kp LEFT_CONTROL  &mo 2   &kp RET       &kp SPACE    &mo 3   &kp RIGHT_CONTROL  &kp LALT   &kp RIGHT_COMMAND
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp LA(LS(TAB)) LA(TAB)>;
         };
 
         LOW {
