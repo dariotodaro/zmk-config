@@ -100,11 +100,11 @@
         default_layer {
             display-name = "todd";
             bindings = <
-&kp ESCAPE  &kp N1  &kp N2            &kp N3    &kp N4            &kp N5                             &kp N6  &kp N7             &kp N8     &kp N9             &kp N0    &kp DEL
-&kp ESC     &kp Q   &kp W             &kp E     &kp R             &kp T                              &kp Y   &kp U              &kp I      &kp O              &kp P     &kp BSPC
-&kp TAB     &kp A   &kp S             &kp D     &kp F             &kp G                              &kp H   &kp J              &kp K      &kp L              &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z   &kp X             &kp C     &kp V             &kp B   &kp C_PLAY    &kp LA(TAB)  &kp N   &kp M              &kp COMMA  &kp DOT            &kp FSLH  &kp RSHFT
-                    &kp LEFT_CONTROL  &kp LALT  &kp LEFT_COMMAND  &mo 2   &kp RET       &kp SPACE    &mo 3   &kp RIGHT_COMMAND  &kp LALT   &kp RIGHT_CONTROL
+&kp ESCAPE     &kp N1  &kp N2            &kp N3    &kp N4            &kp N5                             &kp N6  &kp N7             &kp N8     &kp N9             &kp N0    &kp DEL
+&kp BACKSPACE  &kp Q   &kp W             &kp E     &kp R             &kp T                              &kp Y   &kp U              &kp I      &kp O              &kp P     &kp BSPC
+&kp TAB        &kp A   &kp S             &kp D     &kp F             &kp G                              &kp H   &kp J              &kp K      &kp L              &kp SEMI  &kp SQT
+&kp LSHFT      &kp Z   &kp X             &kp C     &kp V             &kp B   &kp C_PLAY    &kp LA(TAB)  &kp N   &kp M              &kp COMMA  &kp DOT            &kp FSLH  &kp RSHFT
+                       &kp LEFT_CONTROL  &kp LALT  &kp LEFT_COMMAND  &mo 2   &kp RET       &kp SPACE    &mo 3   &kp RIGHT_COMMAND  &kp LALT   &kp RIGHT_CONTROL
             >;
 
             sensor-bindings =
@@ -115,11 +115,11 @@
         windows {
             display-name = "windows";
             bindings = <
-&kp ESCAPE  &kp N1  &kp N2            &kp N3    &kp N4            &kp N5                             &kp N6  &kp N7             &kp N8     &kp N9             &kp N0    &kp DEL
-&kp ESC     &kp Q   &kp W             &kp E     &kp R             &kp T                              &kp Y   &kp U              &kp I      &kp O              &kp P     &kp BSPC
-&kp TAB     &kp A   &kp S             &kp D     &kp F             &kp G                              &kp H   &kp J              &kp K      &kp L              &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z   &kp X             &kp C     &kp V             &kp B   &kp C_PLAY    &kp LA(TAB)  &kp N   &kp M              &kp COMMA  &kp DOT            &kp FSLH  &kp RSHFT
-                    &kp LEFT_COMMAND  &kp LALT  &kp LEFT_CONTROL  &mo 2   &kp RET       &kp SPACE    &mo 3   &kp RIGHT_CONTROL  &kp LALT   &kp RIGHT_COMMAND
+&kp ESCAPE     &kp N1  &kp N2            &kp N3    &kp N4            &kp N5                             &kp N6  &kp N7             &kp N8     &kp N9             &kp N0    &kp DEL
+&kp BACKSPACE  &kp Q   &kp W             &kp E     &kp R             &kp T                              &kp Y   &kp U              &kp I      &kp O              &kp P     &kp BSPC
+&kp TAB        &kp A   &kp S             &kp D     &kp F             &kp G                              &kp H   &kp J              &kp K      &kp L              &kp SEMI  &kp SQT
+&kp LSHFT      &kp Z   &kp X             &kp C     &kp V             &kp B   &kp C_PLAY    &kp LA(TAB)  &kp N   &kp M              &kp COMMA  &kp DOT            &kp FSLH  &kp RSHFT
+                       &kp LEFT_COMMAND  &kp LALT  &kp LEFT_CONTROL  &mo 2   &kp RET       &kp SPACE    &mo 3   &kp RIGHT_CONTROL  &kp LALT   &kp RIGHT_COMMAND
             >;
 
             sensor-bindings =
@@ -130,10 +130,10 @@
         LOW {
             display-name = "lower";
             bindings = <
-&trans     &trans     &trans     &trans          &trans           &trans                              &trans     &trans           &trans    &trans     &trans    &trans
-&kp GRAVE  &kp N1     &kp N2     &kp N3          &kp N4           &kp N5                              &kp N6     &kp N7           &kp N8    &kp N9     &kp N0    &kp DEL
-&trans     &kp EXCL   &kp AT     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp HASH                            &kp AMPS   &kp LBKT         &kp RBKT  &kp LPAR   &kp RPAR  &kp PIPE
-&trans     &kp EQUAL  &kp MINUS  &kp KP_PLUS     &kp DOLLAR       &kp PRCNT  &trans    &kp C_AC_ZOOM  &kp CARET  &kp KP_MULTIPLY  &kp SEMI  &kp COLON  &kp BSLH  &trans
+&trans     &trans     &trans     &trans          &trans           &trans                              &trans     &trans           &trans    &trans    &trans    &trans
+&kp GRAVE  &kp N1     &kp N2     &kp N3          &kp N4           &kp N5                              &kp N6     &kp N7           &kp N8    &kp N9    &kp N0    &kp DEL
+&trans     &kp MINUS  &kp UNDER  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp HASH                            &kp AMPS   &kp LBKT         &kp RBKT  &kp LPAR  &kp RPAR  &kp PIPE
+&trans     &kp PLUS   &kp EQUAL  &kp KP_PLUS     &kp DOLLAR       &kp PRCNT  &trans    &kp C_AC_ZOOM  &kp CARET  &kp KP_MULTIPLY  &kp AT    &kp EXCL  &kp BSLH  &trans
                       &trans     &trans          &trans           &trans     &trans    &trans         &trans     &trans           &trans    &trans
             >;
 
@@ -145,11 +145,11 @@
         HIGH {
             display-name = "raise";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans    &trans     &trans         &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                      &kp F6    &kp F7    &kp F8    &kp F9     &kp F10        &kp F11
-&trans  &trans  &trans  &trans  &trans  &kp CLCK                    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp PAGE_UP    &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans    &trans    &kp HOME  &kp END    &kp PAGE_DOWN  &trans
-                &trans  &trans  &trans  &trans    &trans    &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans    &trans  &trans                    &trans    &trans    &trans    &trans     &trans         &trans
+&trans  &kp F1  &kp F2  &kp F3    &kp F4  &kp F5                    &kp F6    &kp F7    &kp F8    &kp F9     &kp F10        &kp F11
+&trans  &trans  &trans  &trans    &trans  &trans                    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp PAGE_UP    &kp F12
+&trans  &trans  &trans  &kp CAPS  &trans  &trans  &trans    &trans  &trans    &trans    &kp HOME  &kp END    &kp PAGE_DOWN  &trans
+                &trans  &trans    &trans  &trans  &trans    &trans  &trans    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
