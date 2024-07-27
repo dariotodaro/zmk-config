@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2020 Pete Johanson, Ryan Cross
  *
- * SPDX-License-Identifier: MIT';llk;asdfasdfl;kasdf;lkjasdf;lkjasdf;lkjasdf;lkjasdf;lkjasdf;lkjasdf;lkjasdf;lkjasdfasdfasdfasdfsdfgdadfg
+ * SPDX-License-Identifier: MIT
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
