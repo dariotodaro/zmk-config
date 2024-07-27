@@ -5,14 +5,13 @@
  */
 
 #define BASE 0
-#define WINDOWS 1
-#define LOWER 2
-#define RAISE 3
-#define ADJUST 4
+#define LOWER 1
+#define RAISE 2
+#define ADJUST 3
 
-#define MOUSE_KEYS 5
-#define MOUSE_TP 6
-#define MOUSE_TP_SET 7
+#define MOUSE_KEYS 2
+#define MOUSE_TP 3
+#define MOUSE_TP_SET 4
 
 /*
  * Defines to enable/disable features
@@ -120,8 +119,8 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <WINDOWS>;
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 
