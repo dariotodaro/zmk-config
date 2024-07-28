@@ -1,6 +1,6 @@
 file_format: "1"
-id: sofle
-name: Sofle
+id: sofle_dt
+name: Sofle DT
 type: shield
 url: https://github.com/josefadamcik/SofleKeyboard
 requires: [pro_micro]
@@ -11,5 +11,5 @@ features:
   - encoder
   - underglow
 siblings:
-  - sofle_left
-  - sofle_right
+  - sofle_dt_left
+  - sofle_dt_right
