@@ -1,7 +1,7 @@
 # Copyright (c) 2020 Ryan Cross
 # SPDX-License-Identifier: MIT
 
-if SHIELD_SOFLE_DT_LEFT
+if SHIELD_CORNE_TP_RIGHT
 
 config ZMK_KEYBOARD_NAME
     default "Sofle DT"
