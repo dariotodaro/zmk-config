@@ -17,6 +17,10 @@
         ;
 };
 
+&left_encoder {
+    status = "okay";
+};
+
 
 /*
  * PS/2 Mouse / Trackpoint - User Configuration
