@@ -80,37 +80,8 @@
  * to edit the entire keymap file manually every time.
  */
 
- #define U_MOUSE_MOVE_MAX 1400                     /* <--- New max speed setting (default: 600) */
- #undef MOVE_UP
- #undef MOVE_DOWN
- #undef MOVE_LEFT
- #undef MOVE_RIGHT
- #define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
- #define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
- #define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
- #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
-
- &mmv {
- 	time-to-max-speed-ms = <400>;             /* <--- How long time until max speed is reached (default: 500) */
- };
-
- #define U_MOUSE_SCRL_MAX 100                    /* <--- New max speed setting (default: 10) */
-
- #undef SCRL_UP
- #undef SCRL_DOWN
- #undef SCRL_LEFT
- #undef SCRL_RIGHT
- #define SCRL_UP SCRL_VERT(U_MOUSE_SCRL_MAX)
- #define SCRL_DOWN SCRL_VERT(-U_MOUSE_SCRL_MAX)
- #define SCRL_LEFT SCRL_HOR(-U_MOUSE_SCRL_MAX)
- #define SCRL_RIGHT SCRL_HOR(U_MOUSE_SCRL_MAX)
-
- &msc {
-   time-to-max--speed-ms = <500>;                 /* <--- How long time until max speed is reached */
- };
-
 #define HAS_MOUSE_KEYS
-//#define HAS_MOUSE_TP
+#define HAS_MOUSE_TP
 
 #ifdef HAS_MOUSE_KEYS
   #include <dt-bindings/zmk/mouse.h>
@@ -172,9 +143,9 @@
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤                                                    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
     &kp TAB                  &kp A                    &kp S                    &kp D                    &kp F                    &kp G                                                                         &kp H                    &kp J                    &kp K                    &kp L                    &kp SEMI                 &kp SQT
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╭──────────────────────╮  ╭──────────────────────╮ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
-    &kp LSHFT                &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                      &kp MOUSE_OR_LOWER        &kp C_PLAY               &kp N                    &kp M                    &kp COMMA                &kp DOT                  &kp FSLH                 &kp RSHFT
+    &kp LSHFT                &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                      &kp C_PLAY                &kp C_PLAY               &kp N                    &kp M                    &kp COMMA                &kp DOT                  &kp FSLH                 &kp RSHFT
 // ╰────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╰──────────────────────╯  ╰──────────────────────╯ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────╯
-                                                      &kp LEFT_CONTROL         &mt LALT LBKT            &mt LEFT_COMMAND MINUS   &lt LOWER SPACE            &kp RET                   &lt RET                  &lt RAISE SPACE          &mt RIGHT_COMMAND EQUAL  &mt LALT RBKT            &kp RIGHT_CONTROL
+                                                      &kp LEFT_CONTROL         &mt LALT LBKT            &mt LEFT_COMMAND MINUS   &lt LOWER SPACE            &lt MOUSE_OR_LOWER RET    &lt MOUSE_OR_LOWER RET   &lt RAISE SPACE          &mt RIGHT_COMMAND EQUAL  &mt LALT RBKT            &kp RIGHT_CONTROL
 //                                                   ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯  ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯
             >;
 
@@ -299,7 +270,7 @@
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╭──────────────────────╮  ╭──────────────────────╮ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
     &trans                   &none                    &none                    &none                    &msc SCRL_DOWN           &msc SCRL_DOWN             &none                     &none                    &msc SCRL_DOWN           &msc SCRL_DOWN           &msc SCRL_LEFT           &msc SCRL_RIGHT          &trans                    &trans
 // ╰────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╰──────────────────────╯  ╰──────────────────────╯ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────╯
-                                                      &mkp MB4                 &mkp MB5                 &mkp MCLK                &mkp LCLK                &mkp RCLK                   &mkp RCLK                &mkp LCLK                &mkp MCLK                &mkp MB4                 &mkp MB5
+                                                      &none                    &none                    &mkp MCLK                &mkp LCLK                &mkp RCLK                   &mkp RCLK                &mkp LCLK                &mkp MCLK                &none                    &none
 //                                                   ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯  ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯
     >;
             sensor-bindings = <&msc_scroll>,<&msc_scroll>;
