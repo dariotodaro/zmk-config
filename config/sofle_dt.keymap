@@ -14,6 +14,16 @@
 #define MOUSE_TP 6
 #define MOUSE_TP_SET 7
 
+#define MOVE_UP MOVE_Y(-1400)
+#define MOVE_DOWN MOVE_Y(1400)
+#define MOVE_LEFT MOVE_X(-1400)
+#define MOVE_RIGHT MOVE_X(1400)
+
+#define SCRL_UP SCRL_Y(-100)
+#define SCRL_DOWN SCRL_Y(100)
+#define SCRL_LEFT SCRL_X(-100)
+#define SCRL_RIGHT SCRL_X(100)
+
 /*
  * Temporarily here because nice nano v2 spi is not defined on ZMK Yet
  * Source: https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/reviung41/boards/nice_nano.overlay
