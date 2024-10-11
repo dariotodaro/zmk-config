@@ -147,7 +147,7 @@
     };
 
     macros {
-        bt0_and_osx: bt0_and_osx {
+        bt0_and_osx: bt1_and_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
