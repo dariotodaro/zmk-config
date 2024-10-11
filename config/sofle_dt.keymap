@@ -50,7 +50,7 @@
  #define SCRL_RIGHT SCRL_HOR(U_MOUSE_SCRL_MAX)
 
 #define HAS_MOUSE_KEYS
-//#define HAS_MOUSE_TP
+#define HAS_MOUSE_TP
 
 #ifdef HAS_MOUSE_KEYS
   #include <dt-bindings/zmk/mouse.h>
