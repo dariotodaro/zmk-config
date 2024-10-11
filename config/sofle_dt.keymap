@@ -14,15 +14,26 @@
 #define MOUSE_TP 6
 #define MOUSE_TP_SET 7
 
-#define MOVE_UP MOVE_Y(-1400)
-#define MOVE_DOWN MOVE_Y(1400)
-#define MOVE_LEFT MOVE_X(-1400)
-#define MOVE_RIGHT MOVE_X(1400)
+#define U_MOUSE_MOVE_MAX  3000                     /* <--- New max speed setting (default: 600) */
+#undef MOVE_UP
+#undef MOVE_DOWN
+#undef MOVE_LEFT
+#undef MOVE_RIGHT
+#define MOVE_UP MOVE_Y(-U_MOUSE_MOVE_MAX)
+#define MOVE_DOWN MOVE_Y(U_MOUSE_MOVE_MAX)
+#define MOVE_LEFT MOVE_X(-U_MOUSE_MOVE_MAX)
+#define MOVE_RIGHT MOVE_X(U_MOUSE_MOVE_MAX)
 
-#define SCRL_UP SCRL_Y(-100)
-#define SCRL_DOWN SCRL_Y(100)
-#define SCRL_LEFT SCRL_X(-100)
-#define SCRL_RIGHT SCRL_X(100)
+#define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
+
+#undef SCRL_UP
+#undef SCRL_DOWN
+#undef SCRL_LEFT
+#undef SCRL_RIGHT
+#define SCRL_UP SCRL_Y(-U_MOUSE_SCROLL_MAX)
+#define SCRL_DOWN SCRL_Y(U_MOUSE_SCROLL_MAX)
+#define SCRL_LEFT SCRL_X(-U_MOUSE_SCROLL_MAX)
+#define SCRL_RIGHT SCRL_X(U_MOUSE_SCROLL_MAX)
 
 /*
  * Temporarily here because nice nano v2 spi is not defined on ZMK Yet
@@ -173,7 +184,7 @@
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤                                                    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
     &kp TAB                  &kp A                    &kp S                    &kp D                    &kp F                    &kp G                                                                         &kp H                    &kp J                    &kp K                    &kp L                    &kp SEMI                 &kp SQT
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╭──────────────────────╮  ╭──────────────────────╮ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
-    &kp LSHFT                &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                      &lt MOUSE_OR_LOWER RET    &kp C_PLAY               &kp N                    &kp M                    &kp COMMA                &kp DOT                  &kp FSLH                 &kp RSHFT
+    &kp LSHFT                &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                      &mo MOUSE_OR_LOWER        &kp C_PLAY               &kp N                    &kp M                    &kp COMMA                &kp DOT                  &kp FSLH                 &kp RSHFT
 // ╰────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╰──────────────────────╯  ╰──────────────────────╯ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────╯
                                                       &kp LEFT_CONTROL         &mt LALT LBKT            &mt LEFT_COMMAND MINUS   &lt LOWER SPACE          &kp RET                     &kp RET                  &lt RAISE SPACE          &mt RIGHT_COMMAND EQUAL  &mt LALT RBKT            &kp RIGHT_CONTROL
 //                                                   ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯  ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯
@@ -194,7 +205,7 @@
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤                                                    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
     &kp TAB                  &kp A                    &kp S                    &kp D                    &kp F                    &kp G                                                                         &kp H                    &kp J                    &kp K                    &kp L                    &kp SEMI                 &kp SQT
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╭──────────────────────╮  ╭──────────────────────╮ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
-    &kp LSHFT                &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                      &lt MOUSE_OR_LOWER RET    &kp C_PLAY              &kp N                    &kp M                    &kp COMMA                &kp DOT                  &kp FSLH                 &kp RSHFT
+    &kp LSHFT                &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                      &mo MOUSE_OR_LOWER        &kp C_PLAY              &kp N                    &kp M                    &kp COMMA                &kp DOT                  &kp FSLH                 &kp RSHFT
 // ╰────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╰──────────────────────╯  ╰──────────────────────╯ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────╯
                                                       &kp LEFT_COMMAND         &mt LALT LBKT            &mt LEFT_CONTROL MINUS    &lt LOWER SPACE          &kp RET                    &kp RET                  &lt RAISE SPACE          &mt RIGHT_CONTROL EQUAL &mt LALT RBKT            &kp RIGHT_COMMAND
 //                                                   ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯  ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯
