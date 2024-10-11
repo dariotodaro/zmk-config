@@ -70,6 +70,26 @@
 };
 
 /* END temporary RGB support section */
+
+/ {
+    macros {
+        bt0_and_osx: bt0_and_osx {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&bt BT_SEL 0>,
+                <&to BASE>;
+        };
+        bt1_and_win: bt1_and_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&bt BT_SEL 1>,
+                <&to WINDOWS>;
+        };
+    };
+};
+
 /*
  * Defines to enable/disable features
  *
