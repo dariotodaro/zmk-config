@@ -91,16 +91,15 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&bt BT_SEL 0>,
-                  <&to BASE>
+                = <&macro_tap &bt BT_SEL 0>,
+                  <&macro_tap &to BASE>
                 ;
         };
         bt1_and_win: bt1_and_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&bt BT_SEL 1>,
-                  <&to WINDOWS>
+                = <&macro_tap &bt BT_SEL 1 &to BASE>
                 ;
         };
     };
