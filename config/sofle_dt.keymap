@@ -24,6 +24,27 @@
  * to edit the entire keymap file manually every time.
  */
 
+ #define U_MOUSE_MOVE_MAX 1400                     /* <--- New max speed setting (default: 600) */
+ #undef MOVE_UP
+ #undef MOVE_DOWN
+ #undef MOVE_LEFT
+ #undef MOVE_RIGHT
+ #define MOVE_UP MOVE_X(-U_MOUSE_MOVE_MAX)
+ #define MOVE_DOWN MOVE_X(U_MOUSE_MOVE_MAX)
+ #define MOVE_LEFT MOVE_Y(-U_MOUSE_MOVE_MAX)
+ #define MOVE_RIGHT MOVE_Y(U_MOUSE_MOVE_MAX)
+
+ #define U_MOUSE_SCRL_MAX 100                    /* <--- New max speed setting (default: 10) */
+
+ #undef SCRL_UP
+ #undef SCRL_DOWN
+ #undef SCRL_LEFT
+ #undef SCRL_RIGHT
+ #define SCRL_UP SCRL_X(U_MOUSE_SCRL_MAX)
+ #define SCRL_DOWN SCRL_X(-U_MOUSE_SCRL_MAX)
+ #define SCRL_LEFT SCRL_Y(-U_MOUSE_SCRL_MAX)
+ #define SCRL_RIGHT SCRL_Y(U_MOUSE_SCRL_MAX)
+
 #define HAS_MOUSE_KEYS
 #define HAS_MOUSE_TP
 
