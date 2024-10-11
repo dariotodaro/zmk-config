@@ -78,14 +78,6 @@
 #endif  // HAS_MOUSE_TP
 
 / {
-    behaviors {
-        msc_scroll: msc_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-        };
-    };
-
     macros {
         bt0_and_osx: bt0_and_osx {
             compatible = "zmk,behavior-macro";
@@ -101,6 +93,16 @@
                 = <&bt BT_SEL 1>,
                   <&to WINDOWS>
                 ;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        msc_scroll: msc_scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
     };
 
