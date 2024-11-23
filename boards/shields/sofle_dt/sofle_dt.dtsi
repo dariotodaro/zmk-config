@@ -5,15 +5,16 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <sofle_dt-layout.dtsi>
 
 / {
     chosen {
         zephyr,display = &oled;
+        zmk,kscan = &kscan0;
         zmk,physical-layout = &sofle_dt_layout;
     };
 
     &sofle_dt_layout {
-        kscan = <&kscan0>;
         transform = <&matrix_transform0>;
     };
 
