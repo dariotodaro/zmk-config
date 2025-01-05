@@ -121,12 +121,11 @@
  * to edit the entire keymap file manually every time.
  */
 
-// #define HAS_MOUSE_KEYS
+#define HAS_MOUSE_KEYS
 // #define HAS_MOUSE_TP
 
 #ifdef HAS_MOUSE_KEYS
-  #include <dt-bindings/zmk/mouse.h>
-  #include <behaviors/mouse_keys.dtsi>
+    #include <dt-bindings/zmk/pointing.h>
 #endif  // HAS_MOUSE_KEYS
 
 #ifdef HAS_MOUSE_TP
