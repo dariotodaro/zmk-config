@@ -133,10 +133,36 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_cbr {
+        combo_LBRACKET {
             timeout-ms = <50>;
             key-positions = <13 25>;
             bindings = <&kp LBKT>;
+        };
+        combo_LCURLYBRACE {
+            timeout-ms = <50>;
+            key-positions = <14 26>;
+            bindings = <&kp LS(LBKT)>;
+        };
+        combo_LPARENTHESIS {
+            timeout-ms = <50>;
+            key-positions = <15 27>;
+            bindings = <&kp LS(N9)>;
+        };
+        compatible = "zmk,combos";
+        combo_RBRACKET {
+            timeout-ms = <50>;
+            key-positions = <22 34>;
+            bindings = <&kp RBKT>;
+        };
+        combo_RCURLYBRACE {
+            timeout-ms = <50>;
+            key-positions = <21 33>;
+            bindings = <&kp LS(RBKT)>;
+        };
+        combo_RPARENTHESIS {
+            timeout-ms = <50>;
+            key-positions = <20 32>;
+            bindings = <&kp LS(N0)>;
         };
     };
 };
