@@ -9,13 +9,10 @@
 #define LOWER 2
 #define RAISE 3
 #define ADJUST 4
-
-
 #define MOUSE 5
 #define MOUSEFAST 6
 #define MOUSESLOW 7
 #define MOUSEXSLOW 8
-
 #define MOUSE_TP 9
 #define MOUSE_TP_SET 10
 
@@ -148,6 +145,11 @@
             key-positions = <15 27>;
             bindings = <&kp LS(N9)>;
         };
+        combo_DASH {
+            timeout-ms = <50>;
+            key-positions = <16 28>;
+            bindings = <&kp LS(N9)>;
+        };
         compatible = "zmk,combos";
         combo_RBRACKET {
             timeout-ms = <50>;
@@ -162,6 +164,11 @@
         combo_RPARENTHESIS {
             timeout-ms = <50>;
             key-positions = <20 32>;
+            bindings = <&kp LS(N0)>;
+        };
+        combo_EQUAL {
+            timeout-ms = <50>;
+            key-positions = <19 31>;
             bindings = <&kp LS(N0)>;
         };
     };
