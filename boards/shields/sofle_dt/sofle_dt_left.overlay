@@ -18,12 +18,6 @@
 };
 
 /*
- * &left_encoder {
- *    status = "okay";
- * };
-*/
-
-/*
  * PS/2 Mouse / Trackpoint - User Configuration
  *
  * Enable PS/2 drivers on this side of the keyboard.
