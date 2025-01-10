@@ -23,14 +23,3 @@ include:
     snippet: studio-rpc-usb-uart
   - board: nice_nano_v2
     shield: sofle_dt_right
-
-  # Alternative PINs firmware
-  # This builds an additional firmware for the left half that overrides the
-  # pins configured in `sofle_dt_left.overlay` and creates a firmware that
-  # uses the high frequency pins D1 for SCL and D2 for SDA.
-  #
-  # You can remove this entry in your own zmk-config.
-  - board: nice_nano_v2
-    shield: sofle_dt_left
-    cmake-args: -DDTS_EXTRA_CPPFLAGS=-DMOUSE_PS2_ALT_PINS
-    artifact-name: corne_tp_right-nice_nano_v2-scl_D1_sda_D0-zmk
