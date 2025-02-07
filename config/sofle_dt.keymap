@@ -8,10 +8,11 @@
 #define WINDOWS      1
 #define LOWER        2
 #define ADJUST       3
-#define MOUSE        4
-#define MOUSEFAST    5
-#define MOUSESLOW    6
-#define MOUSEXSLOW   7
+#define MOUSE        7
+#define MOUSEFAST    4
+#define MOUSESLOW    5
+#define MOUSEXSLOW   6
+
 #define MOUSE_TP     8
 #define MOUSE_TP_SET 9
 
@@ -267,6 +268,8 @@
                                                       &trans                   &trans                   &trans                   &trans                   &mkp RCLK                   &trans                   &mkp LCLK                &trans                   &trans                   &trans
 //                                                   ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯  ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯
             >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         MouseSlow {
@@ -284,6 +287,8 @@
                                                       &trans                   &trans                   &trans                   &trans                   &mkp RCLK                   &trans                   &mkp LCLK                &trans                   &trans                   &trans
 //                                                   ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯  ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯
             >;
+
+            sensor-bindings = <&inc_dec_kp DOWN UP>;
         };
 
         MouseXSlow_layer {
@@ -301,6 +306,8 @@
                                                       &trans                   &trans                   &trans                   &trans                   &mkp RCLK                   &trans                   &mkp LCLK                &trans                   &trans                   &trans
 //                                                   ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯  ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯
             >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
 #ifdef HAS_MOUSE_TP
