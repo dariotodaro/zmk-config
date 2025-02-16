@@ -17,7 +17,6 @@
 #define MOUSE_TP     9
 #define MOUSE_TP_SET 10
 
-#include <input/processors.dtsi>
 #include <dt-bindings/zmk/ext_power.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
