@@ -13,7 +13,6 @@
 #define MOUSE_TP     9
 #define MOUSE_TP_SET 10
 
-#include <input/processors.dtsi>
 #include <dt-bindings/zmk/ext_power.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -35,27 +34,6 @@
 &msc {
     time-to-max-speed-ms = <0>;
     acceleration-exponent = <1>;
-};
-
-&mmv_input_listener {
-    set_mouse_fast {
-        layers = <MOUSEFAST>;
-        input-processors = <&zip_xy_scaler 2 1>;
-    };
-};
-
-&mmv_input_listener {
-    set_mouse_slow {
-        layers = <MOUSESLOW>;
-        input-processors = <&zip_xy_scaler 1 2>;
-    };
-};
-
-&mmv_input_listener {
-    set_mouse_extra_slow {
-        layers = <MOUSEXSLOW>;
-        input-processors = <&zip_xy_scaler 1 4>;
-    };
 };
 
 / {
