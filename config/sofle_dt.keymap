@@ -22,10 +22,10 @@
 #include <behaviors/mouse_keys.dtsi>
 
 // Mouse layers
-#define AUTOMOUSE 3
-#define MOUSE 4
-#define SCRL 5
-#define SNIPE 6
+#define AUTOMOUSE 5
+#define MOUSE 6
+#define SCRL 7
+#define SNIPE 8
 &mmv {
     time-to-max-speed-ms = <0>;
     acceleration-exponent = <1>;
