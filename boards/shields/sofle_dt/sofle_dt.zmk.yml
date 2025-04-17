@@ -7,9 +7,6 @@ requires: [pro_micro]
 exposes: [i2c_oled]
 features:
   - keys
-  - display
-  - encoder
-  - underglow
 siblings:
   - sofle_dt_left
   - sofle_dt_right
