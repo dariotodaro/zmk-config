@@ -4,7 +4,6 @@ name: Sofle DT
 type: shield
 url: https://github.com/josefadamcik/SofleKeyboard
 requires: [pro_micro]
-exposes: [i2c_oled]
 features:
   - keys
 siblings:

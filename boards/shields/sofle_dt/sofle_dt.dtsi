@@ -9,7 +9,6 @@
 
 / {
     chosen {
-        zephyr,display = &oled;
         zmk,kscan = &kscan0;
         zmk,physical-layout = &sofle_dt_layout;
     };
