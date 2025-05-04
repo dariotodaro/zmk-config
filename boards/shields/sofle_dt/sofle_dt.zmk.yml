@@ -5,6 +5,7 @@ type: shield
 url: https://github.com/josefadamcik/SofleKeyboard
 requires: [pro_micro]
 features:
+  - encoder
   - keys
 siblings:
   - sofle_dt_left
