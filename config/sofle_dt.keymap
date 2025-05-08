@@ -159,9 +159,9 @@
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤                                                    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
     &kp TAB                  &kp A                    &kp S                    &kp D                    &kp F                    &kp G                                                                         &kp H                    &kp J                    &kp K                    &kp L                    &kp SEMI                 &kp SQT
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╭──────────────────────╮  ╭──────────────────────╮ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
-    &kp LSHFT                &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                      &mo MOUSE                 &kp C_PLAY               &kp N                    &kp M                    &kp COMMA                &kp DOT                  &kp FSLH                 &kp RSHFT
+    &kp LSHFT                &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                      &mo ADJUST                &kp C_PLAY               &kp N                    &kp M                    &kp COMMA                &kp DOT                  &kp FSLH                 &kp RSHFT
 // ╰────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╰──────────────────────╯  ╰──────────────────────╯ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────╯
-                                                      &kp LEFT_CONTROL         &kp LALT                 &kp LEFT_COMMAND         &lt LOWER SPACE          &kp RET                     &kp RET                  &lt LOWER SPACE          &kp RIGHT_COMMAND        &kp LALT                 &kp RIGHT_CONTROL
+                                                      &kp LEFT_CONTROL         &kp LALT                 &kp LEFT_COMMAND         &lt LOWER SPACE          &kp RET                     &kp RET                  &mo MOUSE                &kp RIGHT_COMMAND        &kp LALT                 &kp RIGHT_CONTROL
 //                                                   ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯  ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯
             >;
 
@@ -180,7 +180,7 @@
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╭──────────────────────╮  ╭──────────────────────╮ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
     &kp LSHFT                &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                      &mo MOUSE                 &kp C_PLAY              &kp N                    &kp M                    &kp COMMA                &kp DOT                  &kp FSLH                 &kp RSHFT
 // ╰────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╰──────────────────────╯  ╰──────────────────────╯ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────╯
-                                                      &kp LEFT_COMMAND         &kp LALT                 &kp LEFT_CONTROL         &lt LOWER SPACE          &kp RET                     &kp RET                  &lt LOWER SPACE          &kp RIGHT_CONTROL         &kp LALT                &kp RIGHT_COMMAND
+                                                      &kp LEFT_COMMAND         &kp LALT                 &kp LEFT_CONTROL         &lt LOWER SPACE          &kp RET                     &kp RET                  &mo MOUSE                &kp RIGHT_CONTROL         &kp LALT                &kp RIGHT_COMMAND
 //                                                   ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯  ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯
             >;
 
@@ -197,7 +197,7 @@
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤                                                    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
     &trans                   &kp N0                   &kp N4                   &kp N5                   &kp N6                   &trans                                                                        &kp LEFT                 &kp DOWN                 &kp UP                   &kp RIGHT                &kp PAGE_DOWN            &kp PIPE
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╭──────────────────────╮  ╭──────────────────────╮ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
-    &trans                   &kp N0                   &kp N1                   &kp N2                   &kp N3                   &kp GRAVE                  &trans                    &kp LG(0)                &trans                   &trans                   &trans                   &trans                   &kp BSLH                 &trans
+    &trans                   &kp N0                   &kp N1                   &kp N2                   &kp N3                   &kp DOT                    &trans                    &kp LG(0)                &trans                   &trans                   &trans                   &trans                   &kp BSLH                 &trans
 // ╰────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤ ╰──────────────────────╯  ╰──────────────────────╯ ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────╯
                                                       &trans                   &trans                   &trans                   &mo RAISE                &trans                      &trans                   &mo RAISE                &trans                   &trans                   &trans
 //                                                   ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯  ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────╯
@@ -246,28 +246,31 @@
 
         AUTO-MOUSE {
             bindings = <
-              &trans  &trans  &trans     &trans  &trans &trans                        &trans &trans  &trans  &trans  &trans  &trans
-              &trans  &trans  &trans     &trans  &trans &trans                        &trans &trans  &trans  &trans  &trans  &trans
-              &trans  &trans  &trans     &trans  &trans &trans   &trans      &trans   &trans &trans  &trans  &trans  &trans  &trans
-                            &trans &trans   &mt MOUSE   &trans     &trans           &trans       &trans   &trans   &trans &trans
-             >;
+            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
+            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &mo SCRL   &mo SNIPE  &trans     &trans    &trans
+            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &mkp LCLK  &mkp RCLK  &mkp MCLK  &trans    &trans
+            &trans    &trans    &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &trans     &trans     &trans    &trans
+                                &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &trans     &trans
+            >;
         };
 
         MOUSE {
             bindings = <
-            &trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans     &mt SCRL  &trans       &trans  &mkp LCLK  &mkp RCLK  &mkp MCLK  &trans  &trans
-            &trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp LCLK   &mkp RCLK  &trans  &trans  &trans &trans &trans &trans &trans &trans
+            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
+            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &mo SCRL   &mo SNIPE  &trans     &trans    &trans
+            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &mkp LCLK  &mkp RCLK  &mkp MCLK  &trans    &trans
+            &trans    &trans    &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &trans     &trans     &trans    &trans
+                                &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &trans     &trans
             >;
         };
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans &trans    &trans &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans &trans    &trans &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans &trans    &trans &trans  &trans  &trans  &trans  &trans
-          &trans  &trans &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
+            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
+            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
+            &trans    &trans    &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &trans     &trans     &trans    &trans
+                                &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &trans     &trans
             >;
         };
   };
