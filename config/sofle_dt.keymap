@@ -4,15 +4,6 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define MAC          0
-#define WINDOWS      1
-#define LOWER        2
-#define RAISE        3
-#define ADJUST       4
-
-#define MOUSE_TP     9
-#define MOUSE_TP_SET 10
-
 #include <dt-bindings/zmk/ext_power.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -21,11 +12,16 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <behaviors/mouse_keys.dtsi>
 
+#define MAC          0
+#define WINDOWS      1
+#define LOWER        2
+#define RAISE        3
+#define ADJUST       4
+
 // Mouse layers
-#define AUTOMOUSE 5
-#define MOUSE 6
-#define SCRL 7
-#define SNIPE 8
+#define AUTOMOUSE    5
+#define SCRL         6
+#define SNIPE        7
 &mmv {
     time-to-max-speed-ms = <0>;
     acceleration-exponent = <1>;
@@ -112,29 +108,6 @@
         compatible = "zmk,combos";
     };
 };
-/*
- * Defines to enable/disable features
- *
- * These defines allow us to conditionally enable and disable parts of the keymap config.
- *
- * For example, if we decide to build the firmware without the mouse features, we can
- * disable all the config options that rely on those forks and modules without having
- * to edit the entire keymap file manually every time.
- */
-
-// #define HAS_MOUSE_TP
-
-#ifdef HAS_MOUSE_TP
-  // We store the trackpoint settings in a separate file
-  // to make organization a little easier.
-  #include "include/mouse_tp.dtsi"
-#endif  // HAS_MOUSE_TP
-
-#ifdef HAS_MOUSE_TP
-  #define U_TOG_TP_SET &tog MOUSE_TP_SET
-#else
-  #define U_TOG_TP_SET &none
-#endif  // HAS_MOUSE_TP
 
 / {
    conditional_layers {
@@ -149,7 +122,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        MAC {
             display-name = "macOS";
             bindings = <
             &kp ESCAPE      &kp N1      &kp N2                  &kp N3          &kp N4                  &kp N5                                                      &kp N6              &kp N7                  &kp N8          &kp N9                  &kp N0          &kp DEL
@@ -162,7 +135,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        windows {
+        WINDOWS {
             display-name = "windows";
             bindings = <
             &kp ESCAPE      &kp N1      &kp N2                  &kp N3          &kp N4                  &kp N5                                                      &kp N6              &kp N7                  &kp N8          &kp N9                  &kp N0          &kp DEL
@@ -214,7 +187,7 @@
             sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_INC>;
         };
 
-        AUTO-MOUSE {
+        AUTOMOUSE {
             bindings = <
             &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
             &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &mo SCRL   &mo SNIPE  &trans     &trans    &trans
@@ -224,21 +197,21 @@
             >;
         };
 
-        MOUSE {
+        SCRL {
             bindings = <
             &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
-            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &mo SCRL   &mo SNIPE  &trans     &trans    &trans
-            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &mkp LCLK  &mkp RCLK  &mkp MCLK  &trans    &trans
+            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
+            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
             &trans    &trans    &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &trans     &trans     &trans    &trans
                                 &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &trans     &trans
             >;
         };
 
-        SCROLL {
+        SNIPE {
             bindings = <
             &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
-            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
-            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
+            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &mo SCRL   &mo SNIPE  &trans     &trans    &trans
+            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &mkp LCLK  &mkp RCLK  &mkp MCLK  &trans    &trans
             &trans    &trans    &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &trans     &trans     &trans    &trans
                                 &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &trans     &trans
             >;
