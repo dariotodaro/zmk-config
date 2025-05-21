@@ -5,7 +5,6 @@
  */
 
 #include "sofle_dt.dtsi"
-#include "pmw3610.dtsi"
 
 &default_transform {
     col-offset = <6>;
