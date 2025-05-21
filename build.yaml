@@ -22,3 +22,5 @@ include:
     shield: sofle_dt_left
   - board: nice_nano_v2
     shield: sofle_dt_right
+  - board: nice_nano_v2
+    shield: settings_reset
