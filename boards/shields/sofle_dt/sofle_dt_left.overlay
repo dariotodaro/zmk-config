@@ -5,7 +5,6 @@
  */
 
 #include "sofle_dt.dtsi"
-#include "pmw3610.dtsi"
 
 &kscan0 {
     col-gpios
