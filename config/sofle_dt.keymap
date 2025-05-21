@@ -132,7 +132,7 @@
                                         &kp LEFT_CONTROL        &kp LALT        &kp LEFT_COMMAND        &lt LOWER SPACE     &kp RET                 &kp RET         &lt LOWER SPACE     &kp RIGHT_COMMAND       &kp LALT        &kp RIGHT_CONTROL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         WINDOWS {
@@ -145,7 +145,7 @@
                                         &kp LEFT_COMMAND        &kp LALT        &kp LEFT_CONTROL        &lt LOWER SPACE     &kp RET                 &kp RET         &lt LOWER SPACE     &kp RIGHT_CONTROL       &kp LALT        &kp RIGHT_COMMAND
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         LOWER {
