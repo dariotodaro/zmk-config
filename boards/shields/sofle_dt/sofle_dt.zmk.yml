@@ -4,9 +4,11 @@ name: Sofle DTBall
 type: shield
 url: https://github.com/josefadamcik/SofleKeyboard
 requires: [pro_micro]
+exposes: [i2c_oled]
 features:
-  - encoder
   - keys
+  - display
+  - encoder
 siblings:
   - sofle_dt_left
   - sofle_dt_right
