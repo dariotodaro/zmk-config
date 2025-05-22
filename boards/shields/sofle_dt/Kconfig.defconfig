@@ -11,20 +11,24 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
+if SHIELD_SOFLE_DT_LEFT
+
+    if ZMK_DISPLAY
+
+        config I2C
+            default y
+
+        config SSD1306
+            default y
+
+    endif # ZMK_DISPLAY
+
+endif
+
 if SHIELD_SOFLE_DT_LEFT || SHIELD_SOFLE_DT_RIGHT
 
 config ZMK_SPLIT
     default y
-
-if ZMK_DISPLAY
-
-config I2C
-    default y
-
-config SSD1306
-    default y
-
-endif # ZMK_DISPLAY
 
 if LVGL
 
