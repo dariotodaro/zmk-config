@@ -29,3 +29,7 @@
         zmk,physical-layout = &sofle_dt_layout;
     };
 };
+
+&left_encoder {
+    status = "okay";
+};
