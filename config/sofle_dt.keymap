@@ -189,11 +189,11 @@
 
         AUTOMOUSE {
             bindings = <
-            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
-            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &mkp MB4   &mo SCRL   &mkp MB5   &trans    &trans
-            &trans    &trans    &trans     &trans     &trans     &trans                            &trans    &mkp LCLK  &mkp RCLK  &mkp MCLK  &trans    &trans
-            &trans    &trans    &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &mo SNIPE  &trans     &trans    &trans
-                                &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &trans     &trans
+            &to AUTOMOUSE    &trans    &trans     &trans     &trans     &trans                            &trans    &trans     &trans     &trans     &trans    &trans
+            &trans           &trans    &trans     &trans     &trans     &trans                            &trans    &mkp MB4   &mo SCRL   &mkp MB5   &trans    &trans
+            &trans           &trans    &trans     &trans     &trans     &trans                            &trans    &mkp LCLK  &mkp RCLK  &mkp MCLK  &trans    &trans
+            &trans           &trans    &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &mo SNIPE  &trans     &trans    &trans
+                                       &trans     &trans     &trans     &trans    &trans        &trans    &trans    &trans     &trans     &trans
             >;
         };
 
