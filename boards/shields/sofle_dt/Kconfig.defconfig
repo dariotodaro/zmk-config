@@ -11,7 +11,10 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_SOFLE_DT_LEFT
+if SHIELD_SOFLE_DT_LEFT || SHIELD_SOFLE_DT_RIGHT
+
+    config ZMK_SPLIT
+        default y
 
     if ZMK_DISPLAY
 
@@ -39,12 +42,6 @@ if SHIELD_SOFLE_DT_LEFT
         endchoice
 
     endif # LVGL
-endif
-
-if SHIELD_SOFLE_DT_LEFT || SHIELD_SOFLE_DT_RIGHT
-
-    config ZMK_SPLIT
-        default y
 
     if ZMK_RGB_UNDERGLOW
 
