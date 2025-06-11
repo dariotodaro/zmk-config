@@ -190,11 +190,11 @@
         AUTOMOUSE {
             display-name = "Mouse";
             bindings = <
-            &trans  &trans      &trans      &trans      &trans      &trans                          &trans    &trans     &trans     &trans     &trans    &trans
-            &trans  &trans      &trans      &trans      &trans      &trans                          &trans    &trans     &mkp MCLK  &trans     &trans    &trans
-            &trans  &mkp MB5    &mkp RCLK   &mo SCRL    &mkp LCLK   &mkp MB4                        &mkp MB4  &mkp LCLK  &mo SCRL   &mkp RCLK  &mkp MB5  &trans
-            &trans  &trans      &trans      &trans      &trans      &trans      &trans    &trans    &trans    &trans     &mo SNIPE  &trans     &trans    &trans
-                                            &trans      &trans      &trans      &trans    &trans    &trans    &trans     &trans     &trans     &trans
+            &trans  &trans  &trans      &trans      &trans      &trans                          &trans    &trans     &trans     &trans     &trans    &trans
+            &trans  &trans  &mkp MB5    &mkp MCLK   &mkp MB4    &trans                          &trans    &mkp MB4   &mkp MCLK  &mkp MB5   &trans    &trans
+            &trans  &trans  &mkp RCLK   &mo SCRL    &mkp LCLK   &trans                          &trans    &mkp LCLK  &mo SCRL   &mkp RCLK  &trans    &trans
+            &trans  &trans  &trans      &trans      &trans      &trans      &trans    &trans    &trans    &trans     &mo SNIPE  &trans     &trans    &trans
+                                        &trans      &trans      &trans      &trans    &trans    &trans    &trans     &trans     &trans     &trans
             >;
         };
 
@@ -211,12 +211,12 @@
 
         SNIPE {
             bindings = <
-            &trans  &trans      &trans      &trans      &trans      &trans                          &trans    &trans     &trans     &trans     &trans    &trans
-            &trans  &trans      &trans      &trans      &trans      &trans                          &trans    &trans     &mkp MCLK  &trans     &trans    &trans
-            &trans  &mkp MB5    &mkp RCLK   &mo SCRL    &mkp LCLK   &mkp MB4                        &mkp MB4  &mkp LCLK  &mo SCRL   &mkp RCLK  &mkp MB5  &trans
-            &trans  &trans      &trans      &trans      &trans      &trans      &trans    &trans    &trans    &trans     &mo SNIPE  &trans     &trans    &trans
-                                            &trans      &trans      &trans      &trans    &trans    &trans    &trans     &trans     &trans     &trans
-            >;
+            &trans  &trans  &trans      &trans      &trans      &trans                          &trans    &trans     &trans     &trans     &trans    &trans
+            &trans  &trans  &mkp MB5    &mkp MCLK   &mkp MB4    &trans                          &trans    &mkp MB4   &mkp MCLK  &mkp MB5   &trans    &trans
+            &trans  &trans  &mkp RCLK   &mo SCRL    &mkp LCLK   &trans                          &trans    &mkp LCLK  &mo SCRL   &mkp RCLK  &trans    &trans
+            &trans  &trans  &trans      &trans      &trans      &trans      &trans    &trans    &trans    &trans     &mo SNIPE  &trans     &trans    &trans
+                                        &trans      &trans      &trans      &trans    &trans    &trans    &trans     &trans     &trans     &trans
+           >;
         };
   };
 };
