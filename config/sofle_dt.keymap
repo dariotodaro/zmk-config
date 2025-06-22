@@ -143,7 +143,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-            bindings = <&td0>;
         };
 
         WINDOWS {
@@ -157,7 +156,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-            bindings = <&td0>;
         };
 
         LOWER {
