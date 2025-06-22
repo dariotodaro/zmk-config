@@ -119,10 +119,8 @@
             bindings = <&kp &kp C_PLAY>, <&kp &kp C_NEXT>, <&kp &kp C_PREV>;
         };
     };
-};
 
-/ {
-   conditional_layers {
+    conditional_layers {
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
@@ -130,8 +128,6 @@
             then-layer = <ADJUST>;
         };
     };
-
-
 
     keymap {
         compatible = "zmk,keymap";
