@@ -116,7 +116,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp &kp C_PLAY>, <&kp &kp C_NEXT>, <&kp &kp C_PREV>;
+            bindings = <&kp &kp C_PLAY, &kp &kp C_NEXT, &kp &kp C_PREV>;
         };
     };
 
@@ -142,7 +142,7 @@
                                 &kp LCTRL    &kp LALT    &kp LCMD    &lt LOWER SPACE     &kp RET    &kp RET         &lt LOWER SPACE     &kp RCMD   &kp LALT    &kp RCTRL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         WINDOWS {
@@ -155,7 +155,7 @@
                                 &kp LCMD    &kp LALT    &kp LCTRL   &lt LOWER SPACE     &kp RET    &kp RET         &lt LOWER SPACE  &kp RCTRL   &kp LALT    &kp RCMD
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         LOWER {
@@ -198,7 +198,7 @@
         };
 
         AUTOMOUSE {
-            display-name = "Mouse";
+            display-name = "mouse";
             bindings = <
             &trans   &mkp MCLK &mkp RCLK   &mo SCRL  &mkp LCLK &mkp MB4                     &mkp MB4 &mkp LCLK  &mo SCRL &mkp RCLK  &mkp MCLK &mkp MB5
             &trans   &trans    &trans      &trans    &trans    &trans                       &trans   &trans     &trans   &trans     &trans    &trans
@@ -209,7 +209,7 @@
         };
 
         SCRL {
-            display-name = "Scroll";
+            display-name = "scroll";
             bindings = <
             &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
@@ -220,6 +220,7 @@
         };
 
         SNIPE {
+            display-name = "snipe";
             bindings = <
             &trans   &mkp MCLK &mkp RCLK   &mo SCRL  &mkp LCLK &mkp MB4                     &mkp MB4 &mkp LCLK  &mo SCRL &mkp RCLK  &mkp MCLK &mkp MB5
             &trans   &trans    &trans      &trans    &trans    &trans                       &trans   &trans     &trans   &trans     &trans    &trans
