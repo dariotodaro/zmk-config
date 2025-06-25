@@ -116,7 +116,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp &kp C_PLAY, &kp &kp C_NEXT, &kp &kp C_PREV>;
+            bindings = <&kp C_PLAY, &kp C_NEXT, &kp C_PREV>;
         };
     };
 
@@ -200,7 +200,7 @@
         AUTOMOUSE {
             display-name = "mouse";
             bindings = <
-            &trans   &mkp MCLK &mkp RCLK   &mo SCRL  &mkp LCLK &mkp MB4                     &mkp MB4 &mkp LCLK  &mo SCRL &mkp RCLK  &mkp MCLK &mkp MB5
+            &trans   &trans    &trans      &trans    &trans    &trans                       &mkp MB4 &mkp LCLK  &mo SCRL &mkp RCLK  &mkp MCLK &mkp MB5
             &trans   &trans    &trans      &trans    &trans    &trans                       &trans   &trans     &trans   &trans     &trans    &trans
             &trans   &trans    &trans      &trans    &trans    &trans                       &trans   &trans     &trans   &trans     &trans    &trans
             &trans   &trans    &trans      &trans    &trans    &trans    &trans    &trans   &trans   &trans     &trans   &trans     &trans    &trans
