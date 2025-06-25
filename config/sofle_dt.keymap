@@ -49,7 +49,9 @@
                 <&to WINDOWS>;
         };
     };
+};
 
+/ {
     combos {
         compatible = "zmk,combos";
         combo_LBRACKET {
@@ -110,16 +112,20 @@
         };
         compatible = "zmk,combos";
     };
+};
 
+/ {
     behaviors {
         td_media: tap_dance_media {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp A>, <&kp B>, <&kp C>;
+            bindings = <&kp C_PLAY, &kp C_NEXT, &kp C_PREV>;
         };
     };
+};
 
+/ {
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -128,7 +134,9 @@
             then-layer = <ADJUST>;
         };
     };
+};
 
+/ {
     keymap {
         compatible = "zmk,keymap";
 
