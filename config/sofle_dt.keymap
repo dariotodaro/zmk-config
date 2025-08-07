@@ -127,6 +127,11 @@
             if-layers = <LOWER RAISE>;
             then-layer = <ADJUST>;
         };
+
+        lower_on_mouse_layer {
+            if-layers = <LOWER MOUSE>;
+            then-layer = <LOWER>;
+        };
     };
 
     keymap {
@@ -174,11 +179,11 @@
         HIGH {
             display-name = "raise";
             bindings = <
-            &trans  &trans  &trans  &trans  &trans  &trans                          &trans      &trans      &trans      &trans      &trans          &trans
-            &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                          &kp F6      &kp F7      &kp F8      &kp F9      &kp F10         &kp F11
-            &trans  &trans  &trans  &trans  &trans  &trans                          &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp PAGE_UP     &kp F12
-            &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans      &trans      &kp HOME    &kp END     &kp PAGE_DOWN   &trans
-                            &trans  &trans  &trans  &trans  &trans          &trans  &trans      &trans      &trans      &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                 &trans   &trans     &trans    &trans    &trans    &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                 &trans   &trans     &mo SNIPE &trans    &trans    &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                 &mkp MB4 &mkp LCLK  &mo SCRL  &mkp RCLK &mkp MCLK &mkp MB5
+            &trans  &trans  &trans  &trans  &trans  &trans                 &trans   &trans     &trans    &trans    &trans    &trans
+                            &trans  &trans  &trans  &trans  &trans &trans  &trans   &trans     &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(PLUS) LG(MINUS)>;
@@ -187,11 +192,11 @@
         ADJUST {
             display-name = "adjust";
             bindings = <
-            &bt BT_CLR          &bt0_and_osx    &bt1_and_win    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    &to MAC             &to WINDOWS     &none   &none   &none   &trans
-            &ext_power EP_TOG   &none           &none           &none           &none           &none                           &kp C_VOLUME_UP     &kp C_BRI_INC   &none   &none   &none   &none
-            &sys_reset          &none           &none           &none           &none           &none                           &kp C_VOLUME_DOWN   &kp C_BRI_DEC   &none   &none   &none   &none
-            &none               &none           &none           &none           &kp C_PREV      &none           &none   &none   &none               &kp C_NEXT      &none   &none   &none   &none
-                                                &none           &none           &none           &none           &none   &none   &none   &none       &none           &none
+            &bt BT_CLR        &bt0_and_osx &bt1_and_win  &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &to MAC           &to WINDOWS   &none &none &none &trans
+            &ext_power EP_TOG &none        &none         &none        &none        &none                    &kp C_VOLUME_UP   &kp C_BRI_INC &none &none &none &none
+            &sys_reset        &none        &none         &none        &none        &none                    &kp C_VOLUME_DOWN &kp C_BRI_DEC &none &none &none &none
+            &none             &none        &none         &none        &kp C_PREV   &none        &none &none &none             &kp C_NEXT    &none &none &none &none
+                                           &none         &none        &none        &none        &none &none &none             &none         &none &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_INC>;
