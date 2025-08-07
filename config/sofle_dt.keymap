@@ -174,7 +174,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
-        }
+        };
 
         RAISE {
             display-name = "raise";
