@@ -3,7 +3,7 @@
 / {
     sofle_dt_layout: sofle_dt_layout {
         compatible = "zmk,physical-layout";
-        display-name = "Sofle DT";
+        display-name = "Sofle DTBall";
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0   37       0     0     0>
