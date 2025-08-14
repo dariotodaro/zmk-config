@@ -202,7 +202,7 @@
         MOUSE {
             display-name = "mouse";
             bindings = <
-            &trans   &trans    &trans         &trans         &trans          &trans                            &mkp MB4 &mkp LCLK &mo SCRL  &mkp RCLK &mkp MCLK &mkp MB5
+            &trans   &trans    &trans         &trans         &trans          &trans                            &trans   &trans    &trans    &trans    &trans    &trans
             &trans   &trans    &trans         &trans         &trans          &trans                            &trans   &trans    &trans    &trans    &trans    &trans
             &trans   &trans    &trans         &trans         &trans          &trans                            &mkp MB4 &mkp LCLK &mo SCRL  &mkp RCLK &mkp MCLK &mkp MB5
             &trans   &trans    &trans         &trans         &trans          &trans         &trans    &trans   &trans   &trans    &trans    &trans    &trans    &trans
