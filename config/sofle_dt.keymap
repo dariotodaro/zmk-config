@@ -22,7 +22,6 @@
 // Mouse layers
 #define MOUSE        5
 #define SCRL         6
-#define SNIPE        7
 
 &mmv {
     time-to-max-speed-ms = <100>;
@@ -218,17 +217,6 @@
             &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
                             &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        SNIPE {
-            display-name = "snipe";
-            bindings = <
-            &trans   &trans    &trans         &trans         &trans          &trans                            &mkp MB4 &mkp LCLK &mo SCRL  &mkp RCLK &mkp MCLK &mkp MB5
-            &trans   &trans    &trans         &trans         &trans          &trans                            &trans   &trans    &trans    &trans    &trans    &trans
-            &trans   &trans    &trans         &trans         &trans          &trans                            &mkp MB4 &mkp LCLK &mo SCRL  &mkp RCLK &mkp MCLK &mkp MB5
-            &trans   &trans    &trans         &trans         &trans          &trans         &trans    &trans   &trans   &trans    &trans    &trans    &trans    &trans
-                               &mo SNIPE      &trans         &trans          &trans         &trans    &trans   &trans   &trans    &trans    &trans
             >;
         };
   };
