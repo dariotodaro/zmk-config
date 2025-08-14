@@ -159,6 +159,28 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
+        MOUSE {
+            display-name = "mouse";
+            bindings = <
+            &trans   &trans    &trans         &trans         &trans          &trans                            &trans   &trans    &trans    &trans    &trans    &trans
+            &trans   &trans    &trans         &trans         &trans          &trans                            &trans   &trans    &trans    &trans    &trans    &trans
+            &trans   &trans    &trans         &trans         &trans          &trans                            &mkp MB4 &mkp LCLK &mo SCRL  &mkp RCLK &mkp MCLK &mkp MB5
+            &trans   &trans    &trans         &trans         &trans          &trans         &trans    &trans   &trans   &trans    &trans    &trans    &trans    &trans
+                               &trans         &trans         &trans          &trans         &trans    &trans   &trans   &trans    &trans    &trans
+            >;
+        };
+
+        SCRL {
+            display-name = "scroll";
+            bindings = <
+            &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
         LOWER {
             display-name = "lower";
             bindings = <
@@ -197,27 +219,5 @@
 
             sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_INC>;
         };
-
-        MOUSE {
-            display-name = "mouse";
-            bindings = <
-            &trans   &trans    &trans         &trans         &trans          &trans                            &trans   &trans    &trans    &trans    &trans    &trans
-            &trans   &trans    &trans         &trans         &trans          &trans                            &trans   &trans    &trans    &trans    &trans    &trans
-            &trans   &trans    &trans         &trans         &trans          &trans                            &mkp MB4 &mkp LCLK &mo SCRL  &mkp RCLK &mkp MCLK &mkp MB5
-            &trans   &trans    &trans         &trans         &trans          &trans         &trans    &trans   &trans   &trans    &trans    &trans    &trans    &trans
-                               &trans         &trans         &trans          &trans         &trans    &trans   &trans   &trans    &trans    &trans
-            >;
-        };
-
-        SCRL {
-            display-name = "scroll";
-            bindings = <
-            &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-  };
+    };
 };
