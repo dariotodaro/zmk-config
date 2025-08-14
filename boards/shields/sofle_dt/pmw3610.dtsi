@@ -49,7 +49,7 @@
       /*   optional features   */
     automouse-layer = <5>;
     scroll-layers = <6>;
-    snipe-layers = <2>;
+    snipe-layers = <2 3>;
   };
 };
 
