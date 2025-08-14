@@ -15,13 +15,13 @@
 
 #define MAC          0
 #define WINDOWS      1
-#define LOWER        2
-#define RAISE        3
-#define ADJUST       4
+#define MOUSE        2
+#define SCRL         3
+#define LOWER        4
+#define RAISE        5
+#define ADJUST       6
 
 // Mouse layers
-#define MOUSE        5
-#define SCRL         6
 
 &mmv {
     time-to-max-speed-ms = <100>;
