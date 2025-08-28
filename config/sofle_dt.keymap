@@ -53,7 +53,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>; // Must be 1
             bindings =
-                <&tog Mouse>,
+                <&tog MOUSE>,
                 <&kp MACRO_PLACEHOLDER>;
         };
     };
@@ -169,11 +169,11 @@
         MOUSE {
             display-name = "mouse";
             bindings = <
-            &tog MOUSE &trans    &trans        &trans        &trans        &trans                       &trans     &mkp MB4  &mkp MB5    &trans     &trans      &trans
-            &trans     &tmkp Q   &tmkp W       &tmkp E       &tmkp R       &tmkp T                      &tmkp Y    &tmkp U   &tmkp I     &tmkp O    &tmkp P     &trans
-            &trans     &tmkp A   &tmkp S       &tmkp D       &tmkp F       &tmkp G                      &tmkp H    &mkp LCLK &mo SCRL    &mkp RCLK  &mkp MCLK   &trans
-            &trans     &tmkp Z   &tmkp X       &tmkp C       &tmkp V       &tmkp B   &trans    &trans   &tmkp N    &tmkp M   &tmkp COMMA &tmkp DOT  &tmkp FSLH  &trans
-                                 &trans        &trans        &trans        &trans    &trans    &trans   &trans     &trans    &trans      &trans
+            &tmkp ESCAPE &trans    &trans        &trans        &trans        &trans                       &trans     &mkp MB4  &mkp MB5    &trans     &trans      &trans
+            &trans       &tmkp Q   &tmkp W       &tmkp E       &tmkp R       &tmkp T                      &tmkp Y    &tmkp U   &tmkp I     &tmkp O    &tmkp P     &trans
+            &trans       &tmkp A   &tmkp S       &tmkp D       &tmkp F       &tmkp G                      &tmkp H    &mkp LCLK &mo SCRL    &mkp RCLK  &mkp MCLK   &trans
+            &trans       &tmkp Z   &tmkp X       &tmkp C       &tmkp V       &tmkp B   &trans    &trans   &tmkp N    &tmkp M   &tmkp COMMA &tmkp DOT  &tmkp FSLH  &trans
+                                   &trans        &trans        &trans        &trans    &trans    &trans   &trans     &trans    &trans      &trans
             >;
         };
 
