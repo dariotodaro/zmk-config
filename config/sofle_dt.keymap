@@ -33,6 +33,10 @@
     acceleration-exponent = <2>;
 };
 
+&mt {
+    flavor = "balanced";
+};
+
 / {
     macros {
         bt0_and_osx: bt0_and_osx {
