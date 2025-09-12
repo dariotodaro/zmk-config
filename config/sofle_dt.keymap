@@ -144,11 +144,11 @@
         MAC {
             display-name = "macOS";
             bindings = <
-            &kp ESCAPE  &kp N1  &kp N2      &kp N3      &kp N4      &kp N5                                          &kp N6              &kp N7     &kp N8      &kp N9    &kp N0      &kp DEL
-            &kp DEL     &kp Q   &kp W       &kp E       &kp R       &kp T                                           &kp Y               &kp U      &kp I       &kp O     &kp P       &kp BSPC
-            &kp TAB     &kp A   &kp S       &kp D       &kp F       &kp G                                           &kp H               &kp J      &kp K       &kp L     &kp SEMI    &kp SQT
-            &kp LSHFT   &kp Z   &kp X       &kp C       &kp V       &kp B           &td_media         &mo MOUSE     &kp N               &kp M      &kp COMMA   &kp DOT   &kp FSLH    &kp RSHFT
-                                &kp LCTRL   &kp LALT    &kp LCMD    &lt RAISE SPACE &lt MOUSE RET     &lt MOUSE RET &lt LOWER SPACE     &kp RCMD   &kp LALT    &kp RCTRL
+            &kp ESCAPE  &kp N1      &kp N2      &kp N3     &kp N4      &kp N5                                      &kp N6          &kp N7      &kp N8     &kp N9     &kp N0    &kp DEL
+            &kp DEL     &kp Q       &kp W       &kp E      &kp R       &kp T                                       &kp Y           &kp U       &kp I      &kp O      &kp P     &kp BSPC
+            &kp TAB     &mt LCTRL A &mt LALT S  &mt LCMD D &mt LSHFT F &kp G                                       &kp H           &mt RSHFT J &mt RCMD K &mt LALT L &mt RCTRL &kp SQT
+            &kp LSHFT   &kp Z       &kp X       &kp C      &kp V       &kp B           &td_media     &mo MOUSE     &kp N           &kp M       &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
+                                    &kp LCTRL   &kp LALT   &kp LCMD    &lt RAISE SPACE &lt MOUSE RET &lt MOUSE RET &lt LOWER SPACE &kp RCMD    &kp LALT   &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -157,11 +157,11 @@
         WINDOWS {
             display-name = "windows";
             bindings = <
-            &kp ESCAPE  &kp N1  &kp N2      &kp N3      &kp N4      &kp N5                                      &kp N6           &kp N7      &kp N8      &kp N9      &kp N0      &kp DEL
-            &kp DEL     &kp Q   &kp W       &kp E       &kp R       &kp T                                       &kp Y            &kp U       &kp I       &kp O       &kp P       &kp BSPC
-            &kp TAB     &kp A   &kp S       &kp D       &kp F       &kp G                                       &kp H            &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
-            &kp LSHFT   &kp Z   &kp X       &kp C       &kp V       &kp B           &td_media     &mo MOUSE     &kp N            &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
-                                &kp LCMD    &kp LALT    &kp LCTRL   &lt RAISE SPACE &lt MOUSE RET &lt MOUSE RET &lt LOWER SPACE  &kp RCTRL   &kp LALT    &kp RCMD
+            &kp ESCAPE  &kp N1     &kp N2      &kp N3      &kp N4      &kp N5                                      &kp N6           &kp N7      &kp N8      &kp N9      &kp N0      &kp DEL
+            &kp DEL     &kp Q      &kp W       &kp E       &kp R       &kp T                                       &kp Y            &kp U       &kp I       &kp O       &kp P       &kp BSPC
+            &kp TAB     &mt LCMD A &mt LALT S  &mt LCTRL D &mt LSHFT F &kp G                                       &kp H            &mt RSHFT J &mt RCTRL K &mt LALT L &mt RCMD &kp SQT
+            &kp LSHFT   &kp Z      &kp X       &kp C       &kp V       &kp B           &td_media     &mo MOUSE     &kp N            &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
+                                   &kp LCMD    &kp LALT    &kp LCTRL   &lt RAISE SPACE &lt MOUSE RET &lt MOUSE RET &lt LOWER SPACE  &kp RCTRL   &kp LALT    &kp RCMD
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
