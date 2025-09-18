@@ -17,9 +17,10 @@
 #define WINDOWS      1
 #define MOUSE        2
 #define SCRL         3
-#define LOWER        4
-#define RAISE        5
-#define ADJUST       6
+#define LOWER_MAC    4
+#define LOWER        5
+#define RAISE        6
+#define ADJUST       7
 
 // Mouse layers
 
@@ -136,6 +137,10 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
+        adjust_layer_mac {
+            if-layers = <LOWER_MAC RAISE>;
+            then-layer = <ADJUST>;
+        };
         adjust_layer {
             if-layers = <LOWER RAISE>;
             then-layer = <ADJUST>;
@@ -148,11 +153,11 @@
         MAC {
             display-name = "macOS";
             bindings = <
-            &kp ESCAPE  &kp N1      &kp N2      &kp N3     &kp N4      &kp N5                                      &kp N6          &kp N7      &kp N8     &kp N9     &kp N0         &kp DEL
-            &kp DEL     &kp Q       &kp W       &kp E      &kp R       &kp T                                       &kp Y           &kp U       &kp I      &kp O      &kp P          &kp BSPC
-            &kp TAB     &mt LCTRL A &mt LALT S  &mt LCMD D &mt LSHFT F &kp G                                       &kp H           &mt RSHFT J &mt RCMD K &mt LALT L &mt RCTRL SEMI &kp SQT
-            &kp LSHFT   &kp Z       &kp X       &kp C      &kp V       &kp B           &td_media     &mo MOUSE     &kp N           &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp RSHFT
-                                    &kp LCTRL   &kp LALT   &kp LCMD    &lt RAISE SPACE &lt MOUSE RET &lt MOUSE RET &lt LOWER SPACE &kp RCMD    &kp LALT   &kp RCTRL
+            &kp ESCAPE  &kp N1      &kp N2      &kp N3     &kp N4      &kp N5                                              &kp N6              &kp N7      &kp N8     &kp N9     &kp N0         &kp DEL
+            &kp DEL     &kp Q       &kp W       &kp E      &kp R       &kp T                                               &kp Y               &kp U       &kp I      &kp O      &kp P          &kp BSPC
+            &kp TAB     &mt LCTRL A &mt LALT S  &mt LCMD D &mt LSHFT F &kp G                                               &kp H               &mt RSHFT J &mt RCMD K &mt LALT L &mt RCTRL SEMI &kp SQT
+            &kp LSHFT   &kp Z       &kp X       &kp C      &kp V       &kp B               &td_media         &none         &kp N               &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp RSHFT
+                                    &kp LCTRL   &kp LALT   &kp LCMD    &lt LOWER_MAC SPACE &lt RAISE RET     &lt RAISE RET &lt LOWER_MAC SPACE &kp RCMD    &kp LALT   &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -161,11 +166,11 @@
         WINDOWS {
             display-name = "windows";
             bindings = <
-            &kp ESCAPE  &kp N1     &kp N2      &kp N3      &kp N4      &kp N5                                      &kp N6           &kp N7      &kp N8      &kp N9      &kp N0         &kp DEL
-            &kp DEL     &kp Q      &kp W       &kp E       &kp R       &kp T                                       &kp Y            &kp U       &kp I       &kp O       &kp P          &kp BSPC
-            &kp TAB     &mt LCMD A &mt LALT S  &mt LCTRL D &mt LSHFT F &kp G                                       &kp H            &mt RSHFT J &mt RCTRL K &mt LALT L  &mt RCMD SEMI  &kp SQT
-            &kp LSHFT   &kp Z      &kp X       &kp C       &kp V       &kp B           &td_media     &mo MOUSE     &kp N            &kp M       &kp COMMA   &kp DOT     &kp FSLH       &kp RSHFT
-                                   &kp LCMD    &kp LALT    &kp LCTRL   &lt RAISE SPACE &lt MOUSE RET &lt MOUSE RET &lt LOWER SPACE  &kp RCTRL   &kp LALT    &kp RCMD
+            &kp ESCAPE  &kp N1     &kp N2      &kp N3      &kp N4      &kp N5                                          &kp N6           &kp N7      &kp N8      &kp N9      &kp N0         &kp DEL
+            &kp DEL     &kp Q      &kp W       &kp E       &kp R       &kp T                                           &kp Y            &kp U       &kp I       &kp O       &kp P          &kp BSPC
+            &kp TAB     &mt LCMD A &mt LALT S  &mt LCTRL D &mt LSHFT F &kp G                                           &kp H            &mt RSHFT J &mt RCTRL K &mt LALT L  &mt RCMD SEMI  &kp SQT
+            &kp LSHFT   &kp Z      &kp X       &kp C       &kp V       &kp B           &td_media         &none         &kp N            &kp M       &kp COMMA   &kp DOT     &kp FSLH       &kp RSHFT
+                               &kp LCMD    &kp LALT    &kp LCTRL       &lt LOWER SPACE &lt RAISE RET     &lt RAISE RET &lt LOWER SPACE  &kp RCTRL   &kp LALT    &kp RCMD
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -174,7 +179,7 @@
         MOUSE {
             display-name = "mouse";
             bindings = <
-            &tog MOUSE   &trans    &trans        &trans        &trans        &trans                       &trans     &mkp MB4  &mkp MB5    &trans     &trans      &tog MOUSE
+            &trans       &trans    &trans        &trans        &trans        &trans                       &trans     &mkp MB4  &mkp MB5    &trans     &trans      &trans
             &trans       &tmkp Q   &tmkp W       &tmkp E       &tmkp R       &tmkp T                      &tmkp Y    &tmkp U   &tmkp I     &tmkp O    &tmkp P     &trans
             &trans       &tmkp A   &tmkp S       &tmkp D       &tmkp F       &tmkp G                      &tmkp H    &mkp LCLK &mo SCRL    &mkp RCLK  &mkp MCLK   &trans
             &trans       &tmkp Z   &tmkp X       &tmkp C       &tmkp V       &tmkp B   &trans    &trans   &tmkp N    &tmkp M   &tmkp COMMA &tmkp DOT  &tmkp FSLH  &trans
@@ -193,12 +198,25 @@
             >;
         };
 
+        LOWER_MAC {
+            display-name = "lower_mac DDDD";
+            bindings = <
+            &kp F12   &kp F1       &kp F2      &kp F3      &kp F4       &kp F5                          &kp F6    &kp F7         &kp F8        &kp F9         &kp F10             &kp F11
+            &kp GRAVE &trans       &kp N7      &kp N8      &kp N9       &trans                          &trans    &trans         &kp HOME      &kp END        &kp PAGE_UP         &trans
+            &trans    &mt LCTRL N0 &mt LALT N4 &mt LCMD N5 &mt LSHFT N6 &trans                          &kp LEFT  &kp DOWN       &kp UP        &kp RIGHT      &kp PAGE_DOWN       &kp PIPE
+            &trans    &kp N0       &kp N1      &kp N2      &kp N3       &kp DOT   &trans      &kp LG(0) &trans    &trans         &trans        &trans         &kp BSLH            &trans
+                                   &trans      &trans      &trans       &trans    &trans      &trans    &trans    &trans         &trans        &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
+        };
+
         LOWER {
             display-name = "lower";
             bindings = <
             &kp F12   &kp F1      &kp F2      &kp F3       &kp F4       &kp F5                          &kp F6    &kp F7         &kp F8         &kp F9         &kp F10            &kp F11
             &kp GRAVE &trans      &kp N7      &kp N8       &kp N9       &trans                          &trans    &trans         &kp HOME       &kp END        &kp PAGE_UP        &trans
-            &trans    &mt LCMD N0 &mt LALT N4 &mt LCTRL N5 &mt LSHFT N6 &trans                          &kp LEFT  &mt RSHFT DOWN &mt RCTRL UP   &mt LALT RIGHT &mt RCMD PAGE_DOWN &kp PIPE
+            &trans    &mt LCMD N0 &mt LALT N4 &mt LCTRL N5 &mt LSHFT N6 &trans                          &kp LEFT  &kp DOWN       &kp UP         &kp RIGHT      &kp PAGE_DOWN      &kp PIPE
             &trans    &kp N0      &kp N1      &kp N2       &kp N3       &kp DOT   &trans      &kp LG(0) &trans    &trans         &trans         &trans         &kp BSLH           &trans
                                   &trans      &trans       &trans       &trans    &trans      &trans    &trans    &trans         &trans         &trans
             >;
@@ -207,11 +225,11 @@
         };
 
         RAISE {
-            display-name = "raise";
+            display-name = "maus";
             bindings = <
             &kp F12   &kp F1  &kp F2         &kp F3         &kp F4          &kp F5                        &kp F6   &kp F7     &kp F8    &kp F9    &kp F10   &kp F11
-            &kp GRAVE &trans  &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &msc SCRL_UP                  &trans   &trans     &trans    &trans    &trans    &trans
-            &trans    &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN                &mkp MB4 &mkp LCLK  &mo SCRL  &mkp RCLK &mkp MCLK &mkp MB5
+            &kp GRAVE &trans  &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &msc SCRL_UP                  &trans   &mkp MB4   &mkp MB5  &trans    &trans    &trans
+            &trans    &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN                &trans   &mkp LCLK  &mo SCRL  &mkp RCLK &mkp MCLK &trans
             &trans    &trans  &trans         &trans         &trans          &trans                        &trans   &trans     &trans    &trans    &kp BSLH  &trans
                               &trans         &trans         &trans          &trans         &trans &trans  &trans   &trans     &trans    &trans
             >;
