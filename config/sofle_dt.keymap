@@ -16,10 +16,10 @@
 #define MAC          0
 #define WINDOWS      1
 #define MOUSE        2
-#define SCRL         3
-#define LOWER_MAC    4
-#define LOWER        5
-#define RAISE        6
+#define LOWER_MAC    3
+#define LOWER        4
+#define RAISE        5
+#define SCRL         6
 #define ADJUST       7
 
 // Mouse layers
@@ -153,11 +153,11 @@
         MAC {
             display-name = "macOS";
             bindings = <
-            &kp ESCAPE  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                                           &kp N6              &kp N7      &kp N8      &kp N9      &kp N0         &kp DEL
-            &kp DEL     &kp Q       &kp W       &kp E       &kp R       &kp T                                            &kp Y               &kp U       &lt SCRL I  &kp O       &kp P          &kp BSPC
-            &kp TAB     &mt LCTRL A &mt LALT S  &mt LCMD D  &mt LSHFT F &lt MOUSE G                                      &lt SCRL H          &mt RSHFT J &mt RCMD K  &mt LALT L  &mt RCTRL SEMI &kp SQT
-            &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B            &td_media         &none         &kp N               &kp M       &kp COMMA   &kp DOT     &kp FSLH       &kp RSHFT
-                                    &mkp LCLK   &kp ESCAPE  &kp TAB     &lt RAISE SPACE  &lt MOUSE RET     &lt MOUSE RET &lt LOWER_MAC SPACE &kp BSPC    &kp DEL     &mkp LCLK
+            &none       &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                                           &kp N6              &kp N7      &kp N8      &kp N9      &kp N0         &none
+            &none       &kp Q       &kp W       &kp E       &kp R       &kp T                                            &kp Y               &kp U       &lt SCRL I  &kp O       &kp P          &none
+            &none       &mt LCTRL A &mt LALT S  &mt LCMD D  &mt LSHFT F &kp G                                            &kp H               &mt RSHFT J &mt RCMD K  &mt LALT L  &mt RCTRL SEMI &none
+            &none       &kp Z       &kp X       &kp C       &kp V       &kp B            &td_media         &none         &kp N               &kp M       &kp COMMA   &kp DOT     &kp FSLH       &none
+                                    &none       &none       &kp DEL     &lt RAISE BSPC   &kp RET           &kp ESC       &lt LOWER_MAC SPACE &kp TAB     &none       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -188,24 +188,14 @@
             sensor-bindings = <&inc_dec_kp DOWN UP>;
         };
 
-        SCRL {
-            display-name = "scroll";
-            bindings = <
-            &trans      &trans      &trans      &trans      &trans      &trans                                           &trans              &trans      &trans      &trans      &trans         &trans
-            &trans      &trans      &trans      &trans      &trans      &trans                                           &trans              &trans      &trans      &trans      &trans         &trans
-            &trans      &trans      &trans      &trans      &trans      &trans           &trans            &trans        &trans              &trans      &trans      &trans      &trans         &trans
-                                    &trans      &trans      &trans      &trans           &trans            &trans        &trans              &trans      &trans      &trans
-            >;
-        };
-
         LOWER_MAC {
             display-name = "lower_mac";
             bindings = <
-            &kp F12   &kp F1       &kp F2      &kp F3      &kp F4       &kp F5                          &kp F6    &kp F7         &kp F8        &kp F9         &kp F10             &kp F11
-            &kp GRAVE &trans       &kp N7      &kp N8      &kp N9       &trans                          &trans    &trans         &kp HOME      &kp END        &kp PAGE_UP         &trans
-            &trans    &mt LCTRL N0 &mt LALT N4 &mt LCMD N5 &mt LSHFT N6 &trans                          &kp LEFT  &kp DOWN       &kp UP        &kp RIGHT      &kp PAGE_DOWN       &kp PIPE
-            &trans    &kp N0       &kp N1      &kp N2      &kp N3       &kp DOT   &trans      &kp LG(0) &trans    &trans         &trans        &trans         &kp BSLH            &trans
-                                   &trans      &trans      &trans       &trans    &trans      &trans    &trans    &trans         &trans        &trans
+            &kp F12   &kp F1       &kp F2      &kp F3      &kp F4       &kp F5                                           &kp F6              &kp F7      &kp F8      &kp F9      &kp F10        &kp F11
+            &kp GRAVE &kp F11      &kp N7      &kp N8      &kp N9       &kp F12                                          &kp GRAVE           &trans      &kp HOME    &kp END     &kp PAGE_UP    &trans
+            &trans    &mt LCTRL N0 &mt LALT N4 &mt LCMD N5 &mt LSHFT N6 &trans                                           &kp LEFT            &kp DOWN    &kp UP      &kp RIGHT   &kp PAGE_DOWN  &trans
+            &trans    &kp N0       &kp N1      &kp N2      &kp N3       &kp DOT          &trans            &kp LG(0)     &kp TILDE           &kp PIPE    &kp SQT     &kp DQT     &kp BSLH       &trans
+                                   &trans      &trans      &trans       &trans           &trans            &trans        &trans              &trans      &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
@@ -214,11 +204,11 @@
         LOWER {
             display-name = "lower";
             bindings = <
-            &kp F12   &kp F1      &kp F2      &kp F3       &kp F4       &kp F5                          &kp F6    &kp F7         &kp F8         &kp F9         &kp F10            &kp F11
-            &kp GRAVE &trans      &kp N7      &kp N8       &kp N9       &trans                          &trans    &trans         &kp HOME       &kp END        &kp PAGE_UP        &trans
-            &trans    &mt LCMD N0 &mt LALT N4 &mt LCTRL N5 &mt LSHFT N6 &trans                          &kp LEFT  &kp DOWN       &kp UP         &kp RIGHT      &kp PAGE_DOWN      &kp PIPE
-            &trans    &kp N0      &kp N1      &kp N2       &kp N3       &kp DOT   &trans      &kp LG(0) &trans    &trans         &trans         &trans         &kp BSLH           &trans
-                                  &trans      &trans       &trans       &trans    &trans      &trans    &trans    &trans         &trans         &trans
+            &kp F12   &kp F1      &kp F2      &kp F3       &kp F4       &kp F5                                           &kp F6              &kp F7      &kp F8      &kp F9      &kp F10        &kp F11
+            &kp GRAVE &kp F11     &kp N7      &kp N8       &kp N9       &kp F12                                          &kp GRAVE           &trans      &kp HOME    &kp END     &kp PAGE_UP    &trans
+            &trans    &mt LCMD N0 &mt LALT N4 &mt LCTRL N5 &mt LSHFT N6 &trans                                           &kp LEFT            &kp DOWN    &kp UP      &kp RIGHT   &kp PAGE_DOWN  &trans
+            &trans    &kp N0      &kp N1      &kp N2       &kp N3       &kp DOT          &trans            &kp LG(0)     &kp TILDE           &kp PIPE    &kp SQT     &kp DQT     &kp BSLH       &trans
+                                  &trans      &trans       &trans       &trans           &trans            &trans        &trans              &trans      &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
@@ -235,6 +225,16 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LG(PLUS) LG(MINUS)>;
+        };
+
+        SCRL {
+            display-name = "scroll";
+            bindings = <
+            &trans      &trans      &trans      &trans      &trans      &trans                                           &trans              &trans      &trans      &trans      &trans         &trans
+            &trans      &trans      &trans      &trans      &trans      &trans                                           &trans              &trans      &trans      &trans      &trans         &trans
+            &trans      &trans      &trans      &trans      &trans      &trans           &trans            &trans        &trans              &trans      &trans      &trans      &trans         &trans
+                                    &trans      &trans      &trans      &trans           &trans            &trans        &trans              &trans      &trans      &trans
+            >;
         };
 
         ADJUST {
