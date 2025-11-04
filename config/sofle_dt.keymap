@@ -229,7 +229,7 @@
 
         SCRL {
             display-name = "scroll";
-            bindings = <>;
+            bindings = <&trans>;
         };
 
         ADJUST {
