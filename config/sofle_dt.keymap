@@ -204,10 +204,10 @@
         LOWER {
             display-name = "lower";
             bindings = <
-            &kp F12   &kp F1      &kp F2      &kp F3       &kp F4       &kp F5                                           &kp F6              &kp F7      &kp F8      &kp F9      &kp F10        &kp F11
-            &kp GRAVE &kp F11     &kp N7      &kp N8       &kp N9       &kp F12                                          &kp GRAVE           &trans      &kp HOME    &kp END     &kp PAGE_UP    &trans
-            &trans    &mt LCMD N0 &mt LALT N4 &mt LCTRL N5 &mt LSHFT N6 &trans                                           &kp LEFT            &kp DOWN    &kp UP      &kp RIGHT   &kp PAGE_DOWN  &trans
-            &trans    &kp N0      &kp N1      &kp N2       &kp N3       &kp DOT          &trans            &kp LG(0)     &kp TILDE           &kp PIPE    &kp SQT     &kp DQT     &kp BSLH       &trans
+            &none     &kp F1      &kp F2      &kp F3       &kp F4       &kp F5                                           &kp F6              &kp F7      &kp F8      &kp F9      &kp F10        &none
+            &none     &kp F11     &kp N7      &kp N8       &kp N9       &kp F12                                          &kp GRAVE           &trans      &kp HOME    &kp END     &kp PAGE_UP    &none
+            &none     &mt LCMD N0 &mt LALT N4 &mt LCTRL N5 &mt LSHFT N6 &trans                                           &kp LEFT            &kp DOWN    &kp UP      &kp RIGHT   &kp PAGE_DOWN  &none
+            &none     &kp N0      &kp N1      &kp N2       &kp N3       &kp DOT          &trans            &kp LG(0)     &kp TILDE           &kp PIPE    &kp SQT     &kp DQT     &kp BSLH       &none
                                   &trans      &trans       &trans       &trans           &trans            &trans        &trans              &trans      &trans      &trans
             >;
 
@@ -217,10 +217,10 @@
         RAISE {
             display-name = "maus";
             bindings = <
-            &kp F12   &kp F1  &kp F2         &kp F3         &kp F4          &kp F5                        &kp F6   &kp F7     &kp F8    &kp F9    &kp F10   &kp F11
-            &kp GRAVE &trans  &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &msc SCRL_UP                  &trans   &mkp MB4   &mkp MB5  &trans    &trans    &trans
-            &trans    &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN                &trans   &mkp LCLK  &mo SCRL  &mkp RCLK &mkp MCLK &trans
-            &trans    &trans  &trans         &trans         &trans          &trans                        &trans   &trans     &trans    &trans    &kp BSLH  &trans
+            &none     &kp F1  &kp F2         &kp F3         &kp F4          &kp F5                        &kp F6   &kp F7     &kp F8    &kp F9    &kp F10   &none
+            &none     &kp F11 &trans         &trans         &trans          &kp F12                       &trans   &mkp MB4   &mkp MB5  &trans    &trans    &none
+            &none     &trans  &trans         &trans         &trans          &trans                        &trans   &mkp LCLK  &mo SCRL  &mkp RCLK &mkp MCLK &none
+            &none     &trans  &trans         &trans         &trans          &trans                        &trans   &trans     &trans    &trans    &kp BSLH  &none
                               &trans         &trans         &trans          &trans         &trans &trans  &trans   &trans     &trans    &trans
             >;
 
@@ -229,22 +229,16 @@
 
         SCRL {
             display-name = "scroll";
-            bindings = <
-            &trans      &trans      &trans      &trans      &trans      &trans                                           &trans              &trans      &trans      &trans      &trans         &trans
-            &trans      &trans      &trans      &trans      &trans      &trans                                           &trans              &trans      &trans      &trans      &trans         &trans
-            &trans      &trans      &trans      &trans      &trans      &trans           &trans            &trans        &trans              &trans      &trans      &trans      &trans         &trans
-                                    &trans      &trans      &trans      &trans           &trans            &trans        &trans              &trans      &trans      &trans
-            >;
         };
 
         ADJUST {
             display-name = "adjust";
             bindings = <
-            &bt BT_CLR        &bt0_and_osx &bt1_and_win  &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &to MAC           &tog WINDOWS   &none &none &none &trans
-            &ext_power EP_TOG &none        &none         &none        &none        &none                    &kp C_VOLUME_UP   &kp C_BRI_INC &none &none &none &none
-            &sys_reset        &none        &none         &none        &none        &none                    &kp C_VOLUME_DOWN &kp C_BRI_DEC &none &none &none &none
-            &none             &none        &none         &none        &kp C_PREV   &none        &none &none &none             &kp C_NEXT    &none &none &none &none
-                                           &none         &none        &none        &none        &none &none &none             &none         &none &none
+            &bt BT_CLR        &bt0_and_osx   &bt1_and_win   &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4                                 &to MAC             &tog WINDOWS  &none      &none &none &none
+            &ext_power EP_TOG &none          &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &msc SCRL_UP                                 &kp C_VOLUME_UP     &kp C_BRI_INC &none      &none &none &none
+            &sys_reset        &none          &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN                               &kp C_VOLUME_DOWN   &kp C_BRI_DEC &none      &none &none &none
+            &none             &none          &none          &none           &kp C_PREV     &none             &none         &none        &none               &kp C_NEXT    &none      &none &none &none
+                                             &none          &none           &none          &none             &none         &none        &none               &none         &none      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_INC>;
