@@ -48,8 +48,8 @@
 
       /*   optional features   */
       /*   automouse-layer = <2>; */
-    scroll-layers = <3>;
-    snipe-layers = <4 5>;
+    scroll-layers = <6>;
+    snipe-layers = <3 4>;
   };
 };
 
