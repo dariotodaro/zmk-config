@@ -14,13 +14,12 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define MAC          0
-#define WINDOWS      1
-#define MOUSE        2
-#define LOWER_MAC    3
-#define LOWER        4
-#define RAISE        5
-#define SCRL         6
-#define ADJUST       7
+#define WIN          1
+#define LO_M         2
+#define LO           3
+#define RAISE        4
+#define SCRL         5
+#define ADJUST       6
 
 // Mouse layers
 
@@ -52,15 +51,7 @@
             #binding-cells = <0>;
             bindings =
                 <&bt BT_SEL 1>,
-                <&tog WINDOWS>;
-        };
-        tmkp: tmkp {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>; // Must be 1
-            bindings =
-                <&macro_param_1to1>,
-                <&kp MACRO_PLACEHOLDER>,
-                <&tog MOUSE>;
+                <&tog WIN>;
         };
     };
 
@@ -138,11 +129,11 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer_mac {
-            if-layers = <LOWER_MAC RAISE>;
+            if-layers = <LO_M RAISE>;
             then-layer = <ADJUST>;
         };
         adjust_layer {
-            if-layers = <LOWER RAISE>;
+            if-layers = <LO RAISE>;
             then-layer = <ADJUST>;
         };
     };
@@ -153,55 +144,42 @@
         MAC {
             display-name = "macOS";
             bindings = <
-            &none       &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                                           &kp N6              &kp N7      &kp N8      &kp N9      &kp N0         &none
-            &none       &kp Q       &kp W       &kp E       &kp R       &kp T                                            &kp Y               &kp U       &lt SCRL I  &kp O       &kp P          &none
-            &none       &mt LCTRL A &mt LALT S  &mt LCMD D  &mt LSHFT F &kp G                                            &kp H               &mt RSHFT J &mt RCMD K  &mt LALT L  &mt RCTRL SEMI &none
-            &none       &kp Z       &kp X       &kp C       &kp V       &kp B            &td_media         &none         &kp N               &kp M       &kp COMMA   &kp DOT     &kp FSLH       &none
-                                    &none       &none       &kp DEL     &lt RAISE RET    &kp BSPC          &kp ESC       &lt LOWER_MAC SPACE &kp TAB     &none       &none
+            &none           &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                                      &kp N6         &kp N7         &kp N8         &kp N9         &kp N0         &none
+            &none          &kp Q          &kp W          &kp E          &kp R          &kp T                                       &kp Y          &kp U          &lt SCRL I     &kp O          &kp P          &none
+            &none          &mt LCTRL A    &mt LALT S     &mt LCMD D     &mt LSHFT F    &kp G                                       &kp H          &mt RSHFT J    &mt RCMD K     &mt LALT L     &mt RCTRL SEMI &none
+            &none          &kp Z          &kp X          &kp C          &kp V          &kp B          &td_media     &none          &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH       &none
+                                          &none          &none          &kp DEL        &lt RAISE RET  &kp BSPC      &kp ESC        &lt LO_M SPACE &kp TAB        &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        WINDOWS {
+        WIN {
             display-name = "windows";
             bindings = <
-            &trans      &trans      &trans      &trans      &trans      &trans                                           &trans              &trans      &trans      &trans      &trans         &trans
-            &trans      &trans      &trans      &trans      &trans      &trans                                           &trans              &trans      &trans      &trans      &trans         &trans
-            &trans      &mt LCMD A  &trans      &mt LCTRL D &trans      &trans                                           &trans              &trans      &mt RCTRL K &trans      &mt RCMD SEMI  &trans
-            &trans      &trans      &trans      &trans      &trans      &trans           &trans            &trans        &trans              &trans      &trans      &trans      &trans         &trans
-                                    &trans      &trans      &trans      &trans           &trans            &trans        &lt LOWER SPACE     &trans      &trans      &trans
+            &none           &trans          &trans      &trans      &trans      &trans                                           &trans              &trans      &trans      &trans      &trans         &trans
+            &none           &trans      &trans      &trans      &trans      &trans                                           &trans              &trans      &trans      &trans      &trans         &trans
+            &none           &mt LCMD A  &trans      &mt LCTRL D &trans      &trans                                           &trans              &trans      &mt RCTRL K &trans      &mt RCMD SEMI  &trans
+            &none           &trans      &trans      &trans      &trans      &trans           &trans            &trans        &trans              &trans      &trans      &trans      &trans         &trans
+                                    &trans      &trans      &trans      &trans           &trans            &trans        &lt LO SPACE     &trans      &trans      &trans
             >;
 
         };
 
-        MOUSE {
-            display-name = "mouse";
-            bindings = <
-            &trans      &trans      &trans      &trans      &trans      &trans                                           &trans              &trans      &trans      &trans      &trans         &trans
-            &trans      &trans      &trans      &trans      &trans      &trans                                           &trans              &mkp MB4    &mkp MB5    &trans      &trans         &trans
-            &trans      &trans      &trans      &trans      &trans      &trans                                           &trans              &mkp LCLK   &mo SCRL    &mkp RCLK   &mkp MCLK      &trans
-            &trans      &trans      &trans      &trans      &trans      &trans           &trans            &trans        &trans              &trans      &trans      &trans      &trans         &trans
-                                    &trans      &trans      &trans      &trans           &trans            &trans        &trans              &trans      &trans      &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp DOWN UP>;
-        };
-
-        LOWER_MAC {
+        LO_M {
             display-name = "lower_mac";
             bindings = <
-            &kp F12   &kp F1       &kp F2      &kp F3      &kp F4       &kp F5                                           &kp F6              &kp F7      &kp F8      &kp F9      &kp F10        &kp F11
-            &kp GRAVE &kp F11      &kp N7      &kp N8      &kp N9       &kp F12                                          &kp GRAVE           &trans      &kp HOME    &kp END     &kp PAGE_UP    &trans
-            &trans    &mt LCTRL N0 &mt LALT N4 &mt LCMD N5 &mt LSHFT N6 &trans                                           &kp LEFT            &kp DOWN    &kp UP      &kp RIGHT   &kp PAGE_DOWN  &trans
-            &trans    &kp N0       &kp N1      &kp N2      &kp N3       &kp DOT          &trans            &kp LG(0)     &kp TILDE           &kp PIPE    &kp SQT     &kp DQT     &kp BSLH       &trans
+            &none       &kp F1       &kp F2      &kp F3      &kp F4       &kp F5                                           &kp F6              &kp F7      &kp F8      &kp F9      &kp F10        &none
+            &none       &kp F11      &kp N7      &kp N8      &kp N9       &kp F12                                          &kp GRAVE           &trans      &kp HOME    &kp END     &kp PAGE_UP    &none
+            &none       &mt LCTRL N0 &mt LALT N4 &mt LCMD N5 &mt LSHFT N6 &trans                                           &kp LEFT            &kp DOWN    &kp UP      &kp RIGHT   &kp PAGE_DOWN  &none
+            &none       &kp N0       &kp N1      &kp N2      &kp N3       &kp DOT          &trans            &kp LG(0)     &kp TILDE           &kp PIPE    &kp SQT     &kp DQT     &kp BSLH       &none
                                    &trans      &trans      &trans       &trans           &trans            &trans        &trans              &trans      &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
         };
 
-        LOWER {
+        LO {
             display-name = "lower";
             bindings = <
             &none     &kp F1      &kp F2      &kp F3       &kp F4       &kp F5                                           &kp F6              &kp F7      &kp F8      &kp F9      &kp F10        &none
@@ -235,10 +213,10 @@
         ADJUST {
             display-name = "adjust";
             bindings = <
-            &bt BT_CLR        &bt0_and_osx   &bt1_and_win   &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4                                 &to MAC             &tog WINDOWS  &none      &none &none &none
-            &ext_power EP_TOG &none          &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &msc SCRL_UP                                 &kp C_VOLUME_UP     &kp C_BRI_INC &none      &none &none &none
-            &sys_reset        &none          &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN                               &kp C_VOLUME_DOWN   &kp C_BRI_DEC &none      &none &none &none
-            &none             &none          &none          &none           &kp C_PREV     &none             &none         &none        &none               &kp C_NEXT    &none      &none &none &none
+            &none             &bt0_and_osx   &bt1_and_win   &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4                                 &to MAC             &tog WIN      &none      &none &bt BT_CLR &none
+            &none             &none          &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &msc SCRL_UP                                 &kp C_VOL_UP        &kp C_BRI_INC &none      &none &none      &none
+            &none             &none          &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN                               &kp C_VOL_DN        &kp C_BRI_DEC &none      &none &none      &none
+            &none             &none          &none          &none           &kp C_PREV     &none             &none         &none        &none               &kp C_NEXT    &none      &none &none      &none
                                              &none          &none           &none          &none             &none         &none        &none               &none         &none      &none
             >;
 
