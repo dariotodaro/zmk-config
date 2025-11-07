@@ -85,12 +85,12 @@
 
         combo_RBRACKET {
             timeout-ms = <50>;
-            key-positions = <31 43>;
+            key-positions = <31 45>;
             bindings = <&kp RBKT>;
         };
         combo_RCURLYBRACE {
             timeout-ms = <50>;
-            key-positions = <30 42>;
+            key-positions = <30 44>;
             bindings = <&kp LS(RBKT)>;
         };
         combo_RPARENTHESIS {
