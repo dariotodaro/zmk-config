@@ -15,8 +15,8 @@
 
 #define MAC          0
 #define WIN          1
-#define LO_M         2
-#define LO           3
+#define LO           2
+#define LO_W         3
 #define RAISE        4
 #define SCRL         5
 #define ADJUST       6
@@ -129,12 +129,12 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer_mac {
-            if-layers = <LO_M RAISE>;
-            then-layer = <ADJUST>;
-        };
-        adjust_layer {
             if-layers = <LO RAISE>;
             then-layer = <ADJUST>;
+        };
+        win_lower_layer {
+            if-layers = <WIN LO>;
+            then-layer = <LO_W>;
         };
     };
 
@@ -144,11 +144,11 @@
         MAC {
             display-name = "macOS";
             bindings = <
-            &none           &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &none
-            &none           &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &lt SCRL I      &kp O           &kp P           &none
+            &none           &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &lt SCRL N8     &kp N9          &kp N0          &none
+            &none           &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P           &none
             &none           &mt LCTRL A     &mt LALT S      &mt LCMD D      &mt LSHFT F     &kp G                                           &kp H           &mt RSHFT J     &mt RCMD K      &mt LALT L      &mt RCTRL SEMI  &none
             &none           &kp Z           &kp X           &kp C           &kp V           &kp B           &td_media       &none           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &none
-                                            &none           &none           &kp DEL         &lt RAISE TAB   &kp RET         &kp ESC         &lt LO_M SPACE  &kp BSPC        &none           &none
+                                            &none           &none           &kp DEL         &lt RAISE TAB   &kp RET         &kp ESC         &lt LO SPACE    &kp BSPC        &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -157,16 +157,16 @@
         WIN {
             display-name = "windows";
             bindings = <
-            &none           &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
-            &none           &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
-            &none           &mt LCMD A      &trans          &mt LCTRL D     &trans          &trans                                          &trans          &trans          &mt RCTRL K     &trans          &mt RCMD SEMI   &trans
-            &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
-                                            &trans          &trans          &trans          &trans          &trans          &trans          &lt LO SPACE    &trans          &trans          &trans
+            &none           &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &none
+            &none           &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &none
+            &none           &mt LCMD A      &trans          &mt LCTRL D     &trans          &trans                                          &trans          &trans          &mt RCTRL K     &trans          &mt RCMD SEMI   &none
+            &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &none
+                                            &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
 
         };
 
-        LO_M {
+        LO {
             display-name = "lower_mac";
             bindings = <
             &none           &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                           &kp F6         &kp F7          &kp F8          &kp F9          &kp F10         &none
@@ -179,13 +179,13 @@
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
         };
 
-        LO {
+        LO_W {
             display-name = "lower";
             bindings = <
-            &none           &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &none
-            &none           &kp F11         &kp N7          &kp N8          &kp N9          &kp F12                                         &kp GRAVE       &trans          &kp HOME        &kp END         &kp PAGE_UP     &none
-            &none           &mt LCMD N0     &mt LALT N4     &mt LCTRL N5    &mt LSHFT N6    &trans                                          &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp PAGE_DOWN   &none
-            &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)       &kp TILDE       &kp PIPE        &kp SQT         &kp DQT         &kp BSLH        &none
+            &none           &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &none
+            &none           &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &none
+            &none           &mt LCMD N0     &trans          &mt LCTRL N5    &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &none
+            &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &none
                                             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
 
@@ -208,8 +208,8 @@
         SCRL {
             display-name = "scroll";
             bindings = <
-            &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
             &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &mkp LCLK       &trans          &mkp RCLK       &trans          &trans
+            &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
             &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
                                             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
@@ -219,11 +219,11 @@
         ADJUST {
             display-name = "adjust";
             bindings = <
-            &none           &bt0_and_osx    &bt1_and_win   &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4                                      &to MAC         &tog WIN        &none           &none           &bt BT_CLR      &none
-            &none           &none           &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &msc SCRL_UP                                      &kp C_VOL_UP    &kp C_BRI_INC   &none           &none           &none           &none
-            &none           &none           &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN                                    &kp C_VOL_DN    &kp C_BRI_DEC   &none           &none           &none           &none
-            &none           &none           &none          &none           &kp C_PREV     &none             &none           &none           &none           &kp C_NEXT      &none           &none           &none           &none
-                                            &none          &none           &none          &none             &none           &none           &none           &none           &none           &none
+            &none           &bt0_and_osx    &bt1_and_win    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                                    &to MAC         &tog WIN        &none           &none           &bt BT_CLR      &none
+            &none           &none           &mkp LCLK       &mmv MOVE_UP    &mkp RCLK       &msc SCRL_UP                                    &none           &kp C_VOL_UP    &kp C_BRI_INC   &none           &none           &none
+            &none           &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_DOWN                                  &none           &kp C_VOL_DN    &kp C_BRI_DEC   &none           &none           &none
+            &none           &none           &none           &none           &none           &none           &none           &none           &none           &kp C_PREV      &kp C_PLAY      &kp C_NEXT      &none           &none
+                                            &none           &none           &none           &none           &none           &none           &none           &none           &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_INC>;
