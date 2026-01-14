@@ -36,22 +36,6 @@
 };
 
 / {
-    macros {
-        bt0_and_osx: bt0_and_osx {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&bt BT_SEL 0>,
-                <&to MAC>;
-        };
-        bt1_and_win: bt1_and_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&bt BT_SEL 1>,
-                <&tog WIN>;
-        };
-    };
 
     combos {
         compatible = "zmk,combos";
@@ -158,10 +142,6 @@
             if-layers = <LO RAISE>;
             then-layer = <ADJUST>;
         };
-        win_lower_layer {
-            if-layers = <WIN LO>;
-            then-layer = <LO_W>;
-        };
     };
 
     keymap {
@@ -221,7 +201,7 @@
             display-name = "adjust";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-            &none           &bt0_and_osx    &bt1_and_win    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                                    &none           &kp C_VOL_UP    &kp C_BRI_INC   &none           &bt BT_CLR      &none
+            &none           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                                    &none           &kp C_VOL_UP    &kp C_BRI_INC   &none           &bt BT_CLR      &none
             &none           &none           &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT &msc SCRL_UP                                    &none           &kp C_VOL_DN    &kp C_BRI_DEC   &none           &none           &none
             &none           &none           &none           &mmv MOVE_DOWN  &none           &msc SCRL_DOWN  &none           &none           &none           &kp C_PREV      &kp C_PLAY      &kp C_NEXT      &none           &none
                                             &none           &none           &none           &none           &none           &none           &none           &none           &none           &none
