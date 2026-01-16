@@ -13,8 +13,8 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/pointing.h>
 
-#define MAC          0
-#define LO           1
+#define BASE         0
+#define LOWER        1
 #define RAISE        2
 #define SCRL         3
 #define ADJUST       4
@@ -138,8 +138,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        adjust_layer_mac {
-            if-layers = <LO RAISE>;
+        adjust_layer {
+            if-layers = <LOWER RAISE>;
             then-layer = <ADJUST>;
         };
     };
@@ -147,39 +147,39 @@
     keymap {
         compatible = "zmk,keymap";
 
-        MAC {
+        BASE {
             display-name = "todd";
             bindings = <
-            &none           &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &lt SCRL N8     &kp N9          &kp N0          &none
+            &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
             &none           &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P           &none
             &none           &hm_l LCMD A    &hm_l LALT S    &hm_l LCTRL D   &hm_l LSHFT F   &kp G                                           &kp H           &hm_r RSHFT J   &hm_r RCTRL K   &hm_r LALT L    &hm_r RCMD SEMI &none
             &none           &kp Z           &kp X           &kp C           &kp V           &kp B           &td_media       &none           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &none
-                                            &none           &none           &kp DEL         &lt RAISE TAB   &kp RET         &kp ESC         &lt LO SPACE    &kp BSPC        &none           &none
+                                            &none           &none           &kp DEL         &lt RAISE TAB   &kp RET         &kp ESC         &lt LOWER SPACE &kp BSPC        &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        LO {
-            display-name = "lower";
+        LOWER {
+            display-name = "num-nav";
             bindings = <
-            &none           &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                           &kp F6         &kp F7          &kp F8          &kp F9          &kp F10         &none
-            &none           &kp F11         &kp N7          &kp N8          &kp N9          &kp F12                                          &kp GRAVE      &trans          &kp HOME        &kp END         &kp PAGE_UP     &none
-            &none           &mt LCMD N0     &mt LALT N4     &mt LCTRL N5    &mt LSHFT N6    &trans                                           &kp LEFT       &kp DOWN        &kp UP          &kp RIGHT       &kp PAGE_DOWN   &none
-            &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)        &kp TILDE      &kp PIPE        &kp SQT         &kp DQT         &kp BSLH        &none
-                                            &trans          &trans          &trans          &trans          &trans          &trans           &trans         &trans          &trans          &trans
+            &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
+            &none           &kp F11         &kp N7          &kp N8          &kp N9          &kp F12                                         &trans          &trans          &kp HOME        &kp END         &kp PAGE_UP     &none
+            &none           &mt LCMD N0     &mt LALT N4     &mt LCTRL N5    &mt LSHFT N6    &trans                                          &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp PAGE_DOWN   &none
+            &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)       &kp TILDE       &kp PIPE        &kp SQT         &kp DQT         &kp BSLH        &none
+                                            &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
         };
 
         RAISE {
-            display-name = "maus";
+            display-name = "sym-maus";
             bindings = <
-            &none           &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &none
-            &none           &kp F11         &trans          &trans          &trans          &kp F12                                         &trans          &mkp MB4        &mkp MB5        &trans          &trans          &none
-            &none           &trans          &trans          &trans          &trans          &trans                                          &trans          &mkp LCLK       &mo SCRL        &mkp RCLK       &mkp MCLK       &none
-            &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp BSLH        &none
+            &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
+            &none           &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp LS(N4)      &kp LS(N5)                                      &kp LS(N6)      &kp LS(N7)      &kp LS(N8)      &kp GRAVE       &kp LS(GRAVE)   &none
+            &none           &trans          &trans          &trans          &trans          &trans                                          &mkp MB4        &mkp LCLK       &mo SCRL        &mkp RCLK       &mkp MCLK       &none
+            &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &mkp MB5        &kp SQT         &kp LS(SQT)     &kp BSLH        &kp LS(BSLH)    &none
                             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
 
@@ -187,12 +187,12 @@
         };
 
         SCRL {
-            display-name = "scroll";
+            display-name = "fun-scrl";
             bindings = <
             &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &mkp LCLK       &trans          &mkp RCLK       &trans          &trans
-            &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
-            &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
-            &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+            &trans          &kp F12         &kp F7          &kp F8          &kp F9          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
+            &trans          &kp F11         &kp F4          &kp F5          &kp F6          &trans                                          &mkp MB4        &mkp LCLK       &mo SCRL        &mkp RCLK       &mkp MCLK       &none
+            &trans          &kp F10         &kp F1          &kp F2          &kp F3          &kp PAUSE_BREAK &trans          &trans          &mkp MB5        &trans          &trans          &trans          &trans          &none
                                             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
         };
@@ -203,7 +203,7 @@
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
             &none           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                                    &none           &kp C_VOL_UP    &kp C_BRI_INC   &none           &bt BT_CLR      &none
             &none           &none           &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT &msc SCRL_UP                                    &none           &kp C_VOL_DN    &kp C_BRI_DEC   &none           &none           &none
-            &none           &none           &none           &mmv MOVE_DOWN  &none           &msc SCRL_DOWN  &none           &none           &none           &kp C_PREV      &kp C_PLAY      &kp C_NEXT      &none           &none
+            &none           &none           &mkp RCLK       &mmv MOVE_DOWN  &mkp LCLK       &msc SCRL_DOWN  &none           &none           &none           &kp C_PREV      &kp C_PLAY      &kp C_NEXT      &none           &none
                                             &none           &none           &none           &none           &none           &none           &none           &none           &none           &none
             >;
 
