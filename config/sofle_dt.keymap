@@ -154,7 +154,7 @@
             &none           &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P           &none
             &none           &hm_l LCMD A    &hm_l LALT S    &hm_l LCTRL D   &hm_l LSHFT F   &kp G                                           &kp H           &hm_r RSHFT J   &hm_r RCTRL K   &hm_r LALT L    &hm_r RCMD SEMI &none
             &none           &kp Z           &kp X           &kp C           &kp V           &kp B           &td_media       &none           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &none
-                                            &none           &none           &kp DEL         &lt RAISE TAB   &kp RET         &lt SCRL ESC    &lt LOWER SPACE &kp BSPC        &none           &none
+                                            &none           &none           &kp ESC         &lt RAISE BSPC  &kp RET         &lt SCRL TAB    &lt LOWER SPACE &kp DEL         &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
