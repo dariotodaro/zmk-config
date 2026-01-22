@@ -154,7 +154,7 @@
             &none           &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P           &none
             &none           &hm_l LCMD A    &hm_l LALT S    &hm_l LCTRL D   &hm_l LSHFT F   &kp G                                           &kp H           &hm_r RSHFT J   &hm_r RCTRL K   &hm_r LALT L    &hm_r RCMD SEMI &none
             &none           &kp Z           &kp X           &kp C           &kp V           &kp B           &td_media       &none           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &none
-                                            &none           &none           &kp DEL         &lt RAISE TAB   &kp RET         &kp ESC         &lt LOWER SPACE &kp BSPC        &none           &none
+                                            &none           &none           &kp DEL         &lt RAISE TAB   &kp RET         &lt SCRL ESC    &lt LOWER SPACE &kp BSPC        &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -164,8 +164,8 @@
             display-name = "num-nav";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-            &none           &kp F11         &kp N7          &kp N8          &kp N9          &kp F12                                         &trans          &trans          &kp HOME        &kp END         &kp PAGE_UP     &none
-            &none           &mt LCMD N0     &mt LALT N4     &mt LCTRL N5    &mt LSHFT N6    &trans                                          &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp PAGE_DOWN   &none
+            &none           &kp LS(LBKT)    &kp N7          &kp N8          &kp N9          &kp LS(RBKT)                                    &trans          &trans          &kp HOME        &kp END         &kp PAGE_UP     &none
+            &none           &hm_l LCMD LBKT &hm_l LALT N4   &hm_l LCTRL N5  &hm_l LSHFT N6  &kp RBKT                                        &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp PAGE_DOWN   &none
             &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)       &kp TILDE       &kp PIPE        &kp SQT         &kp DQT         &kp BSLH        &none
                                             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
