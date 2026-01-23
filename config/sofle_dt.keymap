@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
 
 #define BASE         0
 #define LOWER        1
