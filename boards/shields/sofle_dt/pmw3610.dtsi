@@ -51,8 +51,20 @@
 };
 
 / {
-  trackball_listener {
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
-  };
+    trackball_listener {
+            compatible = "zmk,input-listener";
+            device = <&trackball>;
+
+            /* This node applies when you are on your SCROLL layer */
+            scroll_view {
+                layers = <3>; // Change to your scroll layer index
+                input-processors = <&zip_xy_to_scroll_mapper>;
+            };
+
+            /* This node applies when you are on your SNIPE layer */
+            snipe_view {
+                layers = <1>; // Change to your snipe layer index
+                input-processors = <&zip_xy_scaler 1 4>; // Slows movement 4x
+            };
+        };
 };
