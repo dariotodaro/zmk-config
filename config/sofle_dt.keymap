@@ -36,6 +36,22 @@
 };
 
 / {
+    macros {
+        sqt: single_quote_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp SQT>,
+                <&kp SPACE>;
+        };
+        dqt: double_quote_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(SQT)>,
+                <&kp SPACE>;
+        };
+    };
 
     combos {
         compatible = "zmk,combos";
@@ -179,7 +195,7 @@
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
             &none           &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp LS(N4)      &kp LS(N5)                                      &kp LS(N6)      &kp LS(N7)      &kp LS(N8)      &kp GRAVE       &kp LS(GRAVE)   &none
             &none           &trans          &trans          &trans          &trans          &trans                                          &mkp MB4        &mkp LCLK       &mo SCRL        &mkp RCLK       &mkp MCLK       &none
-            &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &mkp MB5        &kp SQT         &kp LS(SQT)     &kp BSLH        &kp LS(BSLH)    &none
+            &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &mkp MB5        &sqt            &dqt            &kp BSLH        &kp LS(BSLH)    &none
                             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
 
