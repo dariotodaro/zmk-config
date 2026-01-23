@@ -39,7 +39,7 @@
   pinctrl-names = "default", "sleep";
   cs-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>;
 
-  trackball: trackball@0 {
+  trackball: pmw3610@0 {
     status = "okay";
     compatible = "pixart,pmw3610-alt";
     reg = <0>;
