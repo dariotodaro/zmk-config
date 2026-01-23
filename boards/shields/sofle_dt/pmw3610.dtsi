@@ -50,7 +50,7 @@
     evt-type = <INPUT_EV_REL>;
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
-    smart-mode = true;
+    smart-mode = <true>;
     res-cpi = <800>;
     downshift-time-ms = <3264>;
   };
