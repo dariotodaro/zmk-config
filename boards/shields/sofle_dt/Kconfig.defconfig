@@ -4,7 +4,7 @@
 if SHIELD_SOFLE_DT_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "Sofle DTBall"
+    default "Toddy"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
