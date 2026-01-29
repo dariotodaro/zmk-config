@@ -51,6 +51,7 @@
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
     cpi = <800>;
+    force-awake;
   };
 };
 
@@ -61,7 +62,7 @@
 
             scroll_view {
                 layers = <3>;
-                input-processors = <&zip_xy_scaler 1 8>, <&zip_xy_to_scroll_mapper>;
+                input-processors = <&zip_xy_scaler 1 16>, <&zip_xy_to_scroll_mapper>;
             };
 
             snipe_view {

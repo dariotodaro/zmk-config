@@ -206,10 +206,10 @@
         SCRL {
             display-name = "fun-scrl";
             bindings = <
-            &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &mkp LCLK       &trans          &mkp RCLK       &trans          &trans
-            &trans          &kp F12         &kp F7          &kp F8          &kp F9          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
-            &trans          &kp F11         &kp F4          &kp F5          &kp F6          &trans                                          &mkp MB4        &mkp LCLK       &mo SCRL        &mkp RCLK       &mkp MCLK       &none
-            &trans          &kp F10         &kp F1          &kp F2          &kp F3          &kp PAUSE_BREAK &trans          &trans          &mkp MB5        &trans          &trans          &trans          &trans          &none
+            &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
+            &none           &kp F12         &kp F7          &kp F8          &kp F9          &trans                                          &trans          &trans          &trans          &trans          &trans          &none
+            &none           &kp F11         &kp F4          &kp F5          &kp F6          &trans                                          &mkp MB4        &mkp LCLK       &mo SCRL        &mkp RCLK       &mkp MCLK       &none
+            &none           &kp F10         &kp F1          &kp F2          &kp F3          &kp PAUSE_BREAK &trans          &trans          &mkp MB5        &trans          &trans          &trans          &trans          &none
                                             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
         };
