@@ -52,6 +52,27 @@
                 <&kp LS(SQT)>,
                 <&kp SPACE>;
         };
+        ae: a_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(SQT)>,
+                <&kp A>;
+        };
+        oe: o_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(SQT)>,
+                <&kp O>;
+        };
+        ue: u_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(SQT)>,
+                <&kp U>;
+        };
     };
 
     combos {
@@ -183,7 +204,7 @@
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
             &none           &kp LS(LBKT)    &kp N7          &kp N8          &kp N9          &kp LS(RBKT)                                    &trans          &trans          &kp HOME        &kp END         &kp PAGE_UP     &none
             &none           &hm_l LCMD LBKT &hm_l LALT N4   &hm_l LCTRL N5  &hm_l LSHFT N6  &kp RBKT                                        &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp PAGE_DOWN   &none
-            &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)       &trans          &trans          &trans          &trans          &trans          &none
+            &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)       &trans          &ae             &oe             &ue             &trans          &none
                                             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
 
