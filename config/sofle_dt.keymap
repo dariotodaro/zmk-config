@@ -133,6 +133,24 @@
             key-positions = <28 31>;
             bindings = <&caps_word>;
         };
+        // HJ
+        combo_mkleft {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&mkp LCLK>;
+        };
+        // JK
+        combo_scrllayer {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&mo SCRL>;
+        };
+        //KL
+        combo_mkright { // JK
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&mkp RCLK>;
+        };
         compatible = "zmk,combos";
     };
 
@@ -204,7 +222,7 @@
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
             &none           &kp LS(LBKT)    &kp N7          &kp N8          &kp N9          &kp LS(RBKT)                                    &trans          &trans          &kp HOME        &kp END         &kp PAGE_UP     &none
             &none           &hm_l LCMD LBKT &hm_l LALT N4   &hm_l LCTRL N5  &hm_l LSHFT N6  &kp RBKT                                        &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp PAGE_DOWN   &none
-            &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)       &trans          &ae             &oe             &ue             &trans          &none
+            &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)       &ae             &oe             &ue             &trans          &trans          &none
                                             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
 
