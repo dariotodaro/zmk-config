@@ -146,7 +146,7 @@
             bindings = <&mo SCRL>;
         };
         //KL
-        combo_mkright { // JK
+        combo_mkright {
             timeout-ms = <50>;
             key-positions = <32 33>;
             bindings = <&mkp RCLK>;
