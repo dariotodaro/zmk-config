@@ -133,7 +133,24 @@
             key-positions = <28 31>;
             bindings = <&caps_word>;
         };
-        compatible = "zmk,combos";
+        // HJ
+        combo_mkleft {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&mkp LCLK>;
+        };
+        // JK
+        combo_scrllayer {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&mo SCRL>;
+        };
+        //KL
+        combo_mkright {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&mkp RCLK>;
+        };
     };
 
     behaviors {
