@@ -77,46 +77,25 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_LBRACKET {
-            timeout-ms = <50>;
-            key-positions = <27 39>;
-            bindings = <&kp LBKT>;
-        };
-        combo_LCURLYBRACE {
-            timeout-ms = <50>;
-            key-positions = <28 40>;
-            bindings = <&kp LS(LBKT)>;
-        };
         combo_LPARENTHESIS {
             timeout-ms = <50>;
             key-positions = <15 27>;
             bindings = <&kp LS(N9)>;
         };
-        combo_DASH {
-            timeout-ms = <50>;
-            key-positions = <16 28>;
-            bindings = <&kp MINUS>;
-        };
-        combo_LOWDASH {
-            timeout-ms = <50>;
-            key-positions = <17 29>;
-            bindings = <&kp LS(MINUS)>;
-        };
-
-        combo_RBRACKET {
-            timeout-ms = <50>;
-            key-positions = <31 45>;
-            bindings = <&kp RBKT>;
-        };
-        combo_RCURLYBRACE {
-            timeout-ms = <50>;
-            key-positions = <30 44>;
-            bindings = <&kp LS(RBKT)>;
-        };
         combo_RPARENTHESIS {
             timeout-ms = <50>;
             key-positions = <20 32>;
             bindings = <&kp LS(N0)>;
+        };
+        combo_DASH {
+            timeout-ms = <50>;
+            key-positions = <17 29>
+            bindings = <&kp MINUS>;
+        };
+        combo_LOWDASH {
+            timeout-ms = <50>;
+            key-positions = <16 28>;
+            bindings = <&kp LS(MINUS)>;
         };
         combo_EQUAL {
             timeout-ms = <50>;
@@ -133,22 +112,19 @@
             key-positions = <28 31>;
             bindings = <&caps_word>;
         };
-        // HJ
         combo_mkleft {
             timeout-ms = <50>;
-            key-positions = <30 31>;
+            key-positions = <31 45>;
             bindings = <&mkp LCLK>;
         };
-        // JK
         combo_scrllayer {
             timeout-ms = <50>;
-            key-positions = <31 32>;
+            key-positions = <32 46>;
             bindings = <&mo SCRL>;
         };
-        //KL
         combo_mkright {
             timeout-ms = <50>;
-            key-positions = <32 33>;
+            key-positions = <33 47>;
             bindings = <&mkp RCLK>;
         };
     };
