@@ -89,7 +89,7 @@
         };
         combo_DASH {
             timeout-ms = <50>;
-            key-positions = <17 29>
+            key-positions = <17 29>;
             bindings = <&kp MINUS>;
         };
         combo_LOWDASH {
