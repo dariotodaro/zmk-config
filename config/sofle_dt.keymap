@@ -17,7 +17,7 @@
 #define BASE         0
 #define LOWER        1
 #define RAISE        2
-#define SCRL         3
+#define FUNC         3
 #define ADJUST       4
 
 // Mouse layers
@@ -112,6 +112,11 @@
             key-positions = <28 31>;
             bindings = <&caps_word>;
         };
+        combo_mkback {
+            timeout-ms = <50>;
+            key-positions = <30 44>;
+            bindings = <&mkp MB4>;
+        };
         combo_mkleft {
             timeout-ms = <50>;
             key-positions = <31 45>;
@@ -120,7 +125,7 @@
         combo_scrllayer {
             timeout-ms = <50>;
             key-positions = <32 46>;
-            bindings = <&mo SCRL>;
+            bindings = <&mo FUNC>;
         };
         combo_mkright {
             timeout-ms = <50>;
@@ -185,7 +190,7 @@
             &none           &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P           &none
             &none           &hm_l LCMD A    &hm_l LALT S    &hm_l LCTRL D   &hm_l LSHFT F   &kp G                                           &kp H           &hm_r RSHFT J   &hm_r RCTRL K   &hm_r LALT L    &hm_r RCMD SEMI &none
             &none           &kp Z           &kp X           &kp C           &kp V           &kp B           &td_media       &none           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &none
-                                            &none           &none           &kp ESC         &lt RAISE BSPC  &kp RET         &lt SCRL TAB    &lt LOWER SPACE &kp DEL         &none           &none
+                                            &none           &none           &kp ESC         &lt RAISE BSPC  &kp RET         &lt FUNC TAB    &lt LOWER SPACE &kp DEL         &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -209,7 +214,7 @@
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
             &none           &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp LS(N4)      &kp LS(N5)                                      &kp LS(N6)      &kp LS(N7)      &kp LS(N8)      &kp GRAVE       &kp LS(GRAVE)   &none
-            &none           &trans          &trans          &trans          &trans          &trans                                          &mkp MB4        &mkp LCLK       &mo SCRL        &mkp RCLK       &mkp MCLK       &none
+            &none           &trans          &trans          &trans          &trans          &trans                                          &mkp MB4        &mkp LCLK       &mo FUNC        &mkp RCLK       &mkp MCLK       &none
             &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &mkp MB5        &sqt            &dqt            &kp BSLH        &kp LS(BSLH)    &none
                             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
@@ -217,13 +222,13 @@
             sensor-bindings = <&inc_dec_kp LG(PLUS) LG(MINUS)>;
         };
 
-        SCRL {
-            display-name = "fun-scrl";
+        FUNCTION {
+            display-name = "fun";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
             &none           &kp F12         &kp F7          &kp F8          &kp F9          &trans                                          &trans          &trans          &trans          &trans          &trans          &none
-            &none           &kp F11         &kp F4          &kp F5          &kp F6          &trans                                          &mkp MB4        &mkp LCLK       &mo SCRL        &mkp RCLK       &mkp MCLK       &none
-            &none           &kp F10         &kp F1          &kp F2          &kp F3          &kp PAUSE_BREAK &trans          &trans          &mkp MB5        &trans          &trans          &trans          &trans          &none
+            &none           &kp F11         &kp F4          &kp F5          &kp F6          &trans                                          &trans          &trans          &trans          &trans          &trans          &none
+            &none           &kp F10         &kp F1          &kp F2          &kp F3          &kp PAUSE_BREAK &trans          &trans          &trans          &trans          &trans          &trans          &trans          &none
                                             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
         };
