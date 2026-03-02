@@ -125,11 +125,16 @@
         combo_scrllayer {
             timeout-ms = <50>;
             key-positions = <32 46>;
-            bindings = <&mo FUNC>;
+            bindings = <&mo_mkp FUNC MCLK>;
         };
         combo_mkright {
             timeout-ms = <50>;
             key-positions = <33 47>;
+            bindings = <&mkp RCLK>;
+        };
+        combo_mkfrw {
+            timeout-ms = <50>;
+            key-positions = <34 48>;
             bindings = <&mkp RCLK>;
         };
     };
@@ -168,6 +173,14 @@
                                                50 51 52 53 54>;    // <---[[left-hand keys]]
             hold-trigger-on-release;
             bindings = <&kp>, <&kp>;
+        };
+
+        mo_mkp: scroll_middle_click {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&mkp>;
         };
     };
 
