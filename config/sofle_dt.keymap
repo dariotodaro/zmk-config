@@ -223,12 +223,12 @@
         };
 
         RAISE {
-            display-name = "sym-maus";
+            display-name = "symbol";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-            &none           &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp LS(N4)      &kp LS(N5)                                      &kp LS(N6)      &kp LS(N7)      &kp LS(N8)      &kp GRAVE       &kp LS(GRAVE)   &none
-            &none           &trans          &trans          &trans          &trans          &trans                                          &mkp MB4        &mkp LCLK       &mo FUNC        &mkp RCLK       &mkp MCLK       &none
-            &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &mkp MB5        &sqt            &dqt            &kp BSLH        &kp LS(BSLH)    &none
+            &none           &trans          &trans          &trans          &trans          &trans                                          &trans          &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp GRAVE       &none
+            &none           &trans          &trans          &trans          &trans          &trans                                          &trans          &kp LS(N4)      &kp LS(N5)      &kp LS(N6)      &sqt            &none
+            &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp BSLH        &none
                             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
 
