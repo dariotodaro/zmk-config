@@ -135,7 +135,7 @@
         combo_mkfrw {
             timeout-ms = <50>;
             key-positions = <34 48>;
-            bindings = <&mkp RCLK>;
+            bindings = <&mkp MB5>;
         };
     };
 
