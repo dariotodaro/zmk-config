@@ -82,11 +82,6 @@
             key-positions = <15 27>;
             bindings = <&kp LS(N9)>;
         };
-        combo_RPARENTHESIS {
-            timeout-ms = <50>;
-            key-positions = <20 32>;
-            bindings = <&kp LS(N0)>;
-        };
         combo_DASH {
             timeout-ms = <50>;
             key-positions = <16 28>;
@@ -97,15 +92,20 @@
             key-positions = <17 29>;
             bindings = <&kp LS(MINUS)>;
         };
-        combo_EQUAL {
-            timeout-ms = <50>;
-            key-positions = <19 31>;
-            bindings = <&kp EQUAL>;
-        };
         combo_PLUS {
             timeout-ms = <50>;
-            key-positions = <18 30>;
+            key-positions = <31 45>;
             bindings = <&kp LS(EQUAL)>;
+        };
+        combo_EQUAL {
+            timeout-ms = <50>;
+            key-positions = <32 46>;
+            bindings = <&kp EQUAL>;
+        };
+        combo_RPARENTHESIS {
+            timeout-ms = <50>;
+            key-positions = <33 47>;
+            bindings = <&kp LS(N0)>;
         };
         combo_CAPSWORD {
             timeout-ms = <50>;
@@ -114,27 +114,27 @@
         };
         combo_mkback {
             timeout-ms = <50>;
-            key-positions = <30 44>;
+            key-positions = <18 30>;
             bindings = <&mkp MB4>;
         };
         combo_mkleft {
             timeout-ms = <50>;
-            key-positions = <31 45>;
+            key-positions = <19 31>;
             bindings = <&mkp LCLK>;
         };
         combo_scrllayer {
             timeout-ms = <50>;
-            key-positions = <32 46>;
+            key-positions = <20 32>;
             bindings = <&mo_mkp FUNC MCLK>;
         };
         combo_mkright {
             timeout-ms = <50>;
-            key-positions = <33 47>;
+            key-positions = <21 33>;
             bindings = <&mkp RCLK>;
         };
         combo_mkfrw {
             timeout-ms = <50>;
-            key-positions = <34 48>;
+            key-positions = <22 34>;
             bindings = <&mkp MB5>;
         };
     };
