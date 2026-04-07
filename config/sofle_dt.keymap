@@ -241,7 +241,7 @@
             display-name = "symbol";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-            &none           &trans          &trans          &trans          &trans          &trans                                          &kp trans       &kp LS(N7)      &kp LS(N8)      &kp LS(GRAVE)   &kp GRAVE       &none
+            &none           &trans          &trans          &trans          &trans          &trans                                          &trans          &kp LS(N7)      &kp LS(N8)      &kp LS(GRAVE)   &kp GRAVE       &none
             &none           &trans          &trans          &trans          &trans          &trans                                          &td_dqt         &kp LS(N4)      &kp LS(N5)      &kp LS(N6)      &td_sqt         &none
             &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp LS(BSLH)    &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp BSLH        &none
                             &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
