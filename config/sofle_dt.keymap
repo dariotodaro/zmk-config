@@ -149,13 +149,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp C_PLAY>, <&kp C_NEXT>, <&kp C_PREV>;
         };
-        td_sqt: tap_dance_media {
+        td_sqt: tap_dance_single_quote {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&sqt>;
         };
-        td_sqt: tap_dance_media {
+        td_dqt: tap_dance_double_quote {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
