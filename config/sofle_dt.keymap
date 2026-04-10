@@ -18,7 +18,9 @@
 #define LOWER        1
 #define RAISE        2
 #define FUNC         3
-#define ADJUST       4
+#define GAME         4
+#define G_N          5
+#define ADJUST       6
 
 // Mouse layers
 
@@ -197,6 +199,14 @@
             tapping-term-ms = <100>;
             bindings = <&mo>, <&mkp>;
         };
+
+        g_lt: game_num_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     conditional_layers {
@@ -231,7 +241,7 @@
             &none           &kp LS(LBKT)    &kp N7          &kp N8          &kp N9          &kp LS(RBKT)                                    &trans          &trans          &kp HOME        &kp END         &kp PAGE_UP     &none
             &none           &hm_l LCMD LBKT &hm_l LALT N4   &hm_l LCTRL N5  &hm_l LSHFT N6  &kp RBKT                                        &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp PAGE_DOWN   &none
             &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)       &ae             &oe             &ue             &trans          &trans          &none
-                                            &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+                                            &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
@@ -244,7 +254,7 @@
             &none           &trans          &trans          &trans          &trans          &trans                                          &trans          &kp LS(N7)      &kp LS(N8)      &kp LS(GRAVE)   &kp GRAVE       &none
             &none           &trans          &trans          &trans          &trans          &trans                                          &td_dqt         &kp LS(N4)      &kp LS(N5)      &kp LS(N6)      &td_sqt         &none
             &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp LS(BSLH)    &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp BSLH        &none
-                            &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+                                            &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp LG(PLUS) LG(MINUS)>;
@@ -257,7 +267,29 @@
             &none           &kp F12         &kp F7          &kp F8          &kp F9          &trans                                          &trans          &trans          &trans          &trans          &trans          &none
             &none           &kp F11         &kp F4          &kp F5          &kp F6          &trans                                          &trans          &trans          &trans          &trans          &trans          &none
             &none           &kp F10         &kp F1          &kp F2          &kp F3          &kp PAUSE_BREAK &trans          &trans          &trans          &trans          &trans          &trans          &trans          &none
-                                            &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+                                            &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
+            >;
+        };
+
+        GAME {
+            display-name = "game";
+            bindings = <
+            &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
+            &none           &kp TAB         &kp Q           &kp W           &kp E           &kp R                                           &trans          &trans          &trans          &trans          &trans          &none
+            &none           &kp LSHFT       &kp A           &kp S           &kp D           &kp F                                           &trans          &trans          &trans          &trans          &trans          &none
+            &none           &kp LCTRL       &kp Z           &kp X           &kp C           &kp V           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &none
+                                            &none           &none           &kp LALT        &g_lt G_N SPACE &kp ESC         &trans          &trans          &trans          &none           &none
+            >;
+        };
+
+        G_N {
+            display-name = "game numbers";
+            bindings = <
+            &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
+            &none           &none           &kp N1          &kp N2          &kp N3          &kp N4                                          &tog GAME       &trans          &trans          &trans          &trans          &none
+            &none           &trans          &kp N5          &kp N6          &kp N7          &kp N8                                          &trans          &trans          &trans          &trans          &trans          &none
+            &none           &trans          &kp LC(N1)      &kp LC(N2)      &kp LC(N3)      &kp LC(N4)      &trans          &trans          &trans          &trans          &trans          &trans          &trans          &none
+                                            &none           &none           &kp LALT        &g_lt G_N SPACE &kp ESC         &trans          &trans          &trans          &none           &none
             >;
         };
 
@@ -265,7 +297,7 @@
             display-name = "adjust";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-            &none           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                                    &none           &kp C_VOL_UP    &kp C_BRI_INC   &none           &bt BT_CLR      &none
+            &none           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                                    &tog GAME       &kp C_VOL_UP    &kp C_BRI_INC   &none           &bt BT_CLR      &none
             &none           &none           &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT &msc SCRL_UP                                    &none           &kp C_VOL_DN    &kp C_BRI_DEC   &none           &out OUT_TOG    &none
             &none           &none           &mkp RCLK       &mmv MOVE_DOWN  &mkp LCLK       &msc SCRL_DOWN  &none           &none           &none           &kp C_PREV      &kp C_PLAY      &kp C_NEXT      &none           &none
                                             &none           &none           &none           &none           &none           &none           &none           &none           &none           &none
