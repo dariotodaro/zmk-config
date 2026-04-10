@@ -82,7 +82,7 @@
         combo_PLUS {
             timeout-ms = <50>;
             key-positions = <25 26>;
-            bindings = <&hm_l LGUI(LALT) LS(EQUAL)>;
+            bindings = <&hm_l LG(LALT) LS(EQUAL)>;
         };
         combo_LPARENTHESIS {
             timeout-ms = <50>;
