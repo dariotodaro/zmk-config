@@ -79,33 +79,33 @@
         combo_PLUS {
             timeout-ms = <50>;
             key-positions = <25 26>;
-            bindings = <&kp LS(EQUAL)>;
+            bindings = <&hm_r RS(RCTRL) LS(EQUAL)>;
         };
         compatible = "zmk,combos";
         combo_LPARENTHESIS {
             timeout-ms = <50>;
             key-positions = <26 27>;
-            bindings = <&kp LS(N9)>;
+            bindings = <&hm_r RCTRL(LALT) LS(N9)>;
         };
         combo_DASH {
             timeout-ms = <50>;
             key-positions = <27 28>;
-            bindings = <&kp MINUS>;
+            bindings = <&hm_r LALT(RCMD) MINUS>;
         };
         combo_EQUAL {
             timeout-ms = <50>;
             key-positions = <31 32>;
-            bindings = <&kp EQUAL>;
+            bindings = <&hm_r LCMD(LALT) EQUAL>;
         };
         combo_RPARENTHESIS {
             timeout-ms = <50>;
             key-positions = <32 33>;
-            bindings = <&kp LS(N0)>;
+            bindings = <&hm_r LALT(LCTRL) LS(N0)>;
         };
         combo_LOWDASH {
             timeout-ms = <50>;
             key-positions = <33 34>;
-            bindings = <&kp LS(MINUS)>;
+            bindings = <&hm_r LS(LCRTL) LS(MINUS)>;
         };
 
         combo_CAPSWORD {
