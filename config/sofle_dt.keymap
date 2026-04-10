@@ -78,12 +78,12 @@
     };
 
     combos {
+        compatible = "zmk,combos";
         combo_PLUS {
             timeout-ms = <50>;
             key-positions = <25 26>;
             bindings = <&hm_l LGUI(LALT) LS(EQUAL)>;
         };
-        compatible = "zmk,combos";
         combo_LPARENTHESIS {
             timeout-ms = <50>;
             key-positions = <26 27>;
