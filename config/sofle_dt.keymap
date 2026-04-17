@@ -83,31 +83,37 @@
             timeout-ms = <50>;
             key-positions = <25 26>;
             bindings = <&hm_l LG(LALT) LS(EQUAL)>;
+            layers = <BASE>;
         };
         combo_LPARENTHESIS {
             timeout-ms = <50>;
             key-positions = <26 27>;
             bindings = <&hm_l LA(LCTRL) LS(N9)>;
+            layers = <BASE>;
         };
         combo_DASH {
             timeout-ms = <50>;
             key-positions = <27 28>;
             bindings = <&hm_l LC(LSHFT) MINUS>;
+            layers = <BASE>;
         };
         combo_EQUAL {
             timeout-ms = <50>;
             key-positions = <31 32>;
             bindings = <&hm_r RS(RCTRL) EQUAL>;
+            layers = <BASE>;
         };
         combo_RPARENTHESIS {
             timeout-ms = <50>;
             key-positions = <32 33>;
             bindings = <&hm_r RC(LALT) LS(N0)>;
+            layers = <BASE>;
         };
         combo_LOWDASH {
             timeout-ms = <50>;
             key-positions = <33 34>;
             bindings = <&hm_r LA(RGUI) LS(MINUS)>;
+            layers = <BASE>;
         };
 
         combo_CAPSWORD {
