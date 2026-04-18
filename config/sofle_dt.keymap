@@ -266,10 +266,10 @@
             display-name = "game";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-            &none           &kp TAB         &kp Q           &kp W           &kp E           &kp R                                           &tog GAME       &trans          &trans          &trans          &trans          &none
+            &none           &kp TAB         &kp Q           &kp W           &kp E           &kp R                                           &trans          &trans          &trans          &trans          &trans          &none
             &none           &kp LSHFT       &kp A           &kp S           &kp D           &kp F                                           &trans          &trans          &trans          &trans          &trans          &none
             &none           &kp LCTRL       &kp Z           &kp X           &kp C           &kp V           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &none
-                                            &none           &none           &kp LALT        &g_lt G_N SPACE &kp ESC         &trans          &trans          &trans          &none           &none
+                                            &none           &none           &kp ESC         &g_lt G_N SPACE &kp LALT        &trans          &trans          &trans          &none           &none
             >;
         };
 
@@ -277,10 +277,10 @@
             display-name = "game numbers";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-            &none           &none           &kp N1          &kp N2          &kp N3          &kp N4                                          &tog GAME       &trans          &trans          &trans          &trans          &none
+            &none           &trans          &kp N1          &kp N2          &kp N3          &kp N4                                          &tog GAME       &trans          &trans          &trans          &trans          &none
             &none           &trans          &kp N5          &kp N6          &kp N7          &kp N8                                          &trans          &trans          &trans          &trans          &trans          &none
             &none           &trans          &kp LC(N1)      &kp LC(N2)      &kp LC(N3)      &kp LC(N4)      &trans          &trans          &trans          &trans          &trans          &trans          &trans          &none
-                                            &none           &none           &kp LALT        &g_lt G_N SPACE &kp ESC         &trans          &trans          &trans          &none           &none
+                                            &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
             >;
         };
 
