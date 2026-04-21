@@ -195,6 +195,27 @@
             bindings = <&kp>, <&kp>;
         };
 
+        ihm_l: hrm_index {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <175>;
+            hold-trigger-key-positions = < RIGHT_HAND >;
+            require-prior-idle-ms = <50>;
+            quick-tap-ms = <150>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        ihm_r: hrm_index {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <175>;
+            hold-trigger-key-positions = < LEFT_HAND >;
+            require-prior-idle-ms = <50>;
+            quick-tap-ms = <150>;
+            bindings = <&kp>, <&kp>;
+        };
         slt: smart_thumb_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -238,7 +259,7 @@
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
             &none           &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P           &none
-            &none           &hm_l LCMD A    &hm_l LALT S    &hm_l LCTRL D   &hm_l LSHFT F   &kp G                                           &kp H           &hm_r RSHFT J   &hm_r RCTRL K   &hm_r LALT L    &hm_r RCMD SEMI &none
+            &none           &hm_l LCMD A    &hm_l LALT S    &hm_l LCTRL D   &ihm_l LSHFT F  &kp G                                           &kp H           &ihm_r RSHFT J   &hm_r RCTRL K   &hm_r LALT L    &hm_r RCMD SEMI &none
             &none           &kp Z           &kp X           &kp C           &kp V           &kp B           &td_media       &none           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &none
                                             &none           &none           &kp ESC         &slt RAISE BSPC &kp RET         &slt FUNC TAB   &slt LOWER SPACE &kp DEL         &none           &none
             >;
