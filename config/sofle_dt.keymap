@@ -37,10 +37,6 @@
     acceleration-exponent = <2>;
 };
 
-&mt {
-    flavor = "balanced";
-};
-
 / {
     macros {
         sqt: single_quote_space {
