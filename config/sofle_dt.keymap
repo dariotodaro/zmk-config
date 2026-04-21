@@ -181,6 +181,7 @@
             hold-trigger-key-positions = < RIGHT_HAND >;
             hold-trigger-on-release;
             quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -192,30 +193,34 @@
             hold-trigger-key-positions = < LEFT_HAND >;
             hold-trigger-on-release;
             quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
 
-        ihm_l: hrm_index_left {
+        ihm_l: hrm_index_l {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <175>;
             hold-trigger-key-positions = < RIGHT_HAND >;
+            hold-trigger-on-release;
             require-prior-idle-ms = <50>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
 
-        ihm_r: hrm_index_right {
+        ihm_r: hrm_index_r {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <175>;
             hold-trigger-key-positions = < LEFT_HAND >;
+            hold-trigger-on-release;
             require-prior-idle-ms = <50>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
+
         slt: smart_thumb_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
