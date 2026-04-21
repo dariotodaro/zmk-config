@@ -195,7 +195,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        ihm_l: hrm_index {
+        ihm_l: hrm_index_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -206,7 +206,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        ihm_r: hrm_index {
+        ihm_r: hrm_index_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
