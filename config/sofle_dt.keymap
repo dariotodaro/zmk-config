@@ -29,13 +29,17 @@
 // Mouse layers
 
 &mmv {
-    time-to-max-speed-ms = <100>;
+    time-to-max-speed-ms = <500>;
     acceleration-exponent = <2>;
+    delay-ms = <0>;
+    input-processors = <&zip_xy_scaler 2 1>;
 };
 
 &msc {
-    time-to-max-speed-ms = <100>;
-    acceleration-exponent = <2>;
+    time-to-max-speed-ms = <40>;
+    acceleration-exponent = <1>;
+    delay = <0>;
+    input-processors = <&zip_xy_scaler 3 1>;
 };
 
 / {
