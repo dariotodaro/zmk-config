@@ -45,7 +45,7 @@
     zip_xy_scaler: zip_xy_scaler {
         compatible = "zmk,input-processor-scaler";
         #input-processor-cells = <2>;
-        type = <INPUT_REL_XY>;
+        type = <0>;
         multiplier = <3>; // This is your "DPI". 3 or 4 will fix the snail speed.
         divisor = <1>;
     };
