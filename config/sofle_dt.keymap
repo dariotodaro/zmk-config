@@ -31,6 +31,7 @@
 &mmv {
     time-to-max-speed-ms = <750>;
     acceleration-exponent = <3>;
+    sampling-rate = <16>;
 };
 
 &msc {
