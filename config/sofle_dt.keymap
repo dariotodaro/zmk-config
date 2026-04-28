@@ -29,26 +29,16 @@
 // Mouse layers
 
 &mmv {
-    time-to-max-speed-ms = <600>;
-    acceleration-exponent = <2>;
-    input-processors = <&zip_xy_scaler 3 1>; // multiplier 3, divisor 1
+    time-to-max-speed-ms = <750>;
+    acceleration-exponent = <3>;
 };
 
 &msc {
-    time-to-max-speed-ms = <100>;
+    time-to-max-speed-ms = <40>;
     acceleration-exponent = <1>;
-    input-processors = <&zip_xy_scaler 3 1>;
 };
 
 / {
-    // Define a scaling "engine"
-    zip_xy_scaler: zip_xy_scaler {
-        compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <2>;
-        type = <0>;
-        multiplier = <3>; // This is your "DPI". 3 or 4 will fix the snail speed.
-        divisor = <1>;
-    };
     macros {
         sqt: single_quote_space {
             compatible = "zmk,behavior-macro";
