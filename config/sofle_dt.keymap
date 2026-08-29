@@ -205,9 +205,9 @@
             display-name = "symbol";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-            &none           &trans          &trans          &trans          &trans          &trans                                          &trans          &kp LS(N7)      &kp LS(N8)      &kp LS(GRAVE)   &kp GRAVE       &none
-            &none           &trans          &trans          &trans          &trans          &trans                                          &td_dqt         &kp LS(N4)      &kp LS(N5)      &kp LS(N6)      &td_sqt         &none
-            &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp LS(BSLH)    &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp BSLH        &none
+            &none           &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp LS(N4)      &kp LS(N5)                                      &kp LS(N6)      &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp LS(N0)      &none
+            &none           &trans          &trans          &kp LS(MINUS)   &kp MINUS       &trans                                          &trans          &kp EQUAL       &kp LS(EQUAL)   &trans          &trans          &none
+            &none           &trans          &trans          &kp LS(GRAVE)   &kp GRAVE       &trans          &trans          &trans          &kp LS(BSLH)    &kp DQT         &kp SQT         &trans          &kp BSLH        &none
                                             &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
             >;
 
@@ -251,9 +251,9 @@
             display-name = "adjust";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-            &none           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                                    &tog GAME       &kp C_VOL_UP    &kp C_BRI_INC   &studio_unlock  &bt BT_CLR      &none
-            &none           &none           &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT &msc SCRL_UP                                    &none           &kp C_VOL_DN    &kp C_BRI_DEC   &none           &out OUT_TOG    &none
-            &none           &none           &mkp RCLK       &mmv MOVE_DOWN  &mkp LCLK       &msc SCRL_DOWN  &none           &none           &none           &kp C_PREV      &kp C_PLAY      &kp C_NEXT      &none           &none
+            &none           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                                    &tog GAME       &none           &none           &none           &bt BT_CLR      &none
+            &none           &none           &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT &msc SCRL_UP                                    &none           &none           &none           &none           &out OUT_TOG    &none
+            &none           &none           &mkp RCLK       &mmv MOVE_DOWN  &mkp LCLK       &msc SCRL_DOWN  &none           &none           &none           &none           &none           &none           &none           &none
                                             &none           &none           &none           &none           &none           &none           &none           &none           &none           &none
             >;
 
