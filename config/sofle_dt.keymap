@@ -93,7 +93,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <350>;
             hold-trigger-key-positions = < RIGHT_HAND >;
             hold-trigger-on-release;
             quick-tap-ms = <175>;
@@ -105,7 +105,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <350>;
             hold-trigger-key-positions = < LEFT_HAND >;
             hold-trigger-on-release;
             quick-tap-ms = <175>;
@@ -117,7 +117,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <175>;
+            tapping-term-ms = <100>;
             hold-trigger-key-positions = < RIGHT_HAND >;
             hold-trigger-on-release;
             require-prior-idle-ms = <50>;
@@ -129,7 +129,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <175>;
+            tapping-term-ms = <100>;
             hold-trigger-key-positions = < LEFT_HAND >;
             hold-trigger-on-release;
             require-prior-idle-ms = <50>;
