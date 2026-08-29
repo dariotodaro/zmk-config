@@ -38,84 +38,9 @@
 };
 
 / {
-    macros {
-        sqt: single_quote_space {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp SQT>,
-                <&kp SPACE>;
-        };
-        dqt: double_quote_space {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LS(SQT)>,
-                <&kp SPACE>;
-        };
-        ae: a_umlaut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LS(SQT)>,
-                <&kp A>;
-        };
-        oe: o_umlaut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LS(SQT)>,
-                <&kp O>;
-        };
-        ue: u_umlaut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LS(SQT)>,
-                <&kp U>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
         require-prior-idle-ms = <100>;
-
-        combo_PLUS {
-            timeout-ms = <50>;
-            key-positions = <25 26>;
-            bindings = <&hm_l LG(LALT) LS(EQUAL)>;
-            layers = <BASE>;
-        };
-        combo_LPARENTHESIS {
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&hm_l LA(LCTRL) LS(N9)>;
-            layers = <BASE>;
-        };
-        combo_DASH {
-            timeout-ms = <50>;
-            key-positions = <27 28>;
-            bindings = <&hm_l LC(LSHFT) MINUS>;
-            layers = <BASE>;
-        };
-        combo_EQUAL {
-            timeout-ms = <50>;
-            key-positions = <31 32>;
-            bindings = <&hm_r RS(RCTRL) EQUAL>;
-            layers = <BASE>;
-        };
-        combo_RPARENTHESIS {
-            timeout-ms = <50>;
-            key-positions = <32 33>;
-            bindings = <&hm_r RC(LALT) LS(N0)>;
-            layers = <BASE>;
-        };
-        combo_LOWDASH {
-            timeout-ms = <50>;
-            key-positions = <33 34>;
-            bindings = <&hm_r LA(RGUI) LS(MINUS)>;
-            layers = <BASE>;
-        };
 
         combo_CAPSWORD {
             timeout-ms = <50>;
@@ -149,6 +74,11 @@
             key-positions = <22 34>;
             bindings = <&mkp MB5>;
         };
+        combo_mkmiddle {
+            timeout-ms = <50>;
+            key-positions = <32 46>;
+            bindings = <&mkp MCLK>;
+        };
     };
 
     behaviors {
@@ -157,18 +87,6 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp C_PLAY>, <&kp C_NEXT>, <&kp C_PREV>;
-        };
-        td_sqt: tap_dance_single_quote {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SQT>, <&sqt>;
-        };
-        td_dqt: tap_dance_double_quote {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp DQT>, <&dqt>;
         };
 
         hm_l: homerow_mod_left {
