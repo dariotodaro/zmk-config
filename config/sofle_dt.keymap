@@ -38,6 +38,25 @@
 };
 
 / {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        scroll_view {
+            layers = <SCRL>;
+            input-processors = <&zip_xy_scaler 1 16>,
+                               <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
+                               <&zip_xy_to_scroll_mapper>;
+        };
+
+        snipe_view {
+            layers = <RAISE>;
+            input-processors = <&zip_xy_scaler 1 3>;
+        };
+    };
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
         require-prior-idle-ms = <100>;
