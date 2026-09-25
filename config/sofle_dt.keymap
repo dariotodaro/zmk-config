@@ -208,6 +208,8 @@
             &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none           &none           &none           &none           &none           &none
                                             &none           &none           &tog MOUSE      &trans          &trans          &trans          &trans          &trans          &none           &none
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         SCRL {
