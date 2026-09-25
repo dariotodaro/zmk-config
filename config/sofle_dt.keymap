@@ -230,9 +230,9 @@
             display-name = "num-nav";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-            &none           &trans          &kp N7          &kp N8          &kp N9          &trans                                          &trans          &to MOUSE       &kp HOME        &kp END         &kp PAGE_UP     &none
+            &none           &trans          &kp N7          &kp N8          &kp N9          &trans                                          &to BASE        &to MOUSE       &kp HOME        &kp END         &kp PAGE_UP     &none
             &none           &kp LCMD        &hm_l LALT N4   &hm_l LCTRL N5  &ihm_l LSHFT N6 &kp COMMA                                       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp PAGE_DOWN   &none
-            &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)       &trans          &to BASE        &trans          &trans          &trans          &none
+            &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)       &trans          &trans          &trans          &trans          &trans          &none
                                             &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
             >;
 
@@ -245,7 +245,7 @@
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
             &none           &kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp LS(N4)      &kp LS(N5)                                      &kp LS(N6)      &kp LS(N7)      &kp LS(N8)      &kp DQT         &kp SQT         &none
             &none           &kp LS(LBKT)    &kp LBKT        &kp LS(N9)      &kp MINUS       &kp LS(MINUS)                                   &kp LS(EQUAL)   &kp EQUAL       &kp LS(N0)      &kp RBKT        &kp LS(RBKT)    &none
-            &none           &trans          &trans          &kp LS(GRAVE)   &kp GRAVE       &trans          &trans          &trans          &kp LS(BSLH)    &trans          &trans          &trans          &kp BSLH        &none
+            &none           &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp LS(GRAVE)   &kp GRAVE    &kp LS(BSLH)    &kp BSLH        &none
                                             &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
             >;
 
