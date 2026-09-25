@@ -1,4 +1,4 @@
-#include <layers.h>
+#include "../../../config/layers.h"
 
 #define INPUT_EV_KEY 0x01               /**< Key event */
 #define INPUT_EV_REL 0x02               /**< Relative coordinate event */
