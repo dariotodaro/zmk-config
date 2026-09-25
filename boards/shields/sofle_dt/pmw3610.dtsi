@@ -1,3 +1,5 @@
+#include <layers.h>
+
 #define INPUT_EV_KEY 0x01               /**< Key event */
 #define INPUT_EV_REL 0x02               /**< Relative coordinate event */
 #define INPUT_EV_ABS 0x03               /**< Absolute coordinate event */
@@ -61,14 +63,14 @@
         device = <&trackball>;
 
         scroll_view {
-            layers = <2>;
+            layers = <SCRL>;
             input-processors = <&zip_xy_scaler 1 16>,
                                <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
                                <&zip_xy_to_scroll_mapper>;
         };
 
         snipe_view {
-            layers = <4>;
+            layers = <RAISE>;
             input-processors = <&zip_xy_scaler 1 3>;
         };
     };
