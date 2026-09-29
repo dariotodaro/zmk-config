@@ -153,7 +153,7 @@
         };
 
         click_to_mouse: click_to_mouse {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&to MOUSE>, <&macro_param_1to1>, <&mkp MACRO_PLACEHOLDER>;
         };
