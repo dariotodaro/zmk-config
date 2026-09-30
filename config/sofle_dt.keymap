@@ -48,7 +48,7 @@
         combo_mkleft {
             timeout-ms = <50>;
             key-positions = <19 31>;
-            bindings = <&click_to_mouse LCLK>;
+            bindings = <&to MOUSE>;
         };
         combo_scrllayer {
             timeout-ms = <50>;
@@ -150,12 +150,6 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&to BASE>, <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>;
-        };
-
-        click_to_mouse: click_to_mouse {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to MOUSE>, <&macro_param_1to1>, <&mkp MACRO_PLACEHOLDER>;
         };
 
         hm_l_b: hrm_left_exit_mouse {
