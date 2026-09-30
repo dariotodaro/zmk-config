@@ -236,7 +236,7 @@
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
             &none           &trans          &kp N7          &kp N8          &kp N9          &trans                                          &to BASE        &to MOUSE       &kp HOME        &kp END         &kp PAGE_UP     &none
             &none           &kp LCMD        &hm_l LALT N4   &hm_l LCTRL N5  &ihm_l LSHFT N6 &kp COMMA                                       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp PAGE_DOWN   &none
-            &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)       &trans          &trans          &trans          &trans          &trans          &none
+            &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)       &trans          &trans          &kp COMMA       &kp DOT         &kp FSLH        &none
                                             &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
             >;
 
