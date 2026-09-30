@@ -80,6 +80,13 @@
             bindings = <&kp C_PLAY>, <&kp C_NEXT>, <&kp C_PREV>;
         };
 
+        td_q: tap_dance_q {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Q>, <&kp ESC>;
+        };
+
         hm_l: homerow_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -162,10 +169,10 @@
             display-name = "toddy";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-            &none           &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P           &none
+            &none           &td_q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P           &none
             &none           &hm_l LCMD A    &hm_l LALT S    &hm_l LCTRL D   &ihm_l LSHFT F  &kp G                                           &kp H           &ihm_r RSHFT J  &hm_r RCTRL K   &hm_r LALT L    &hm_r RCMD SEMI &none
             &none           &kp Z           &kp X           &kp C           &kp V           &kp B           &td_media       &none           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &none
-                                            &none           &none           &kp ESC         &slt SYMB BSPC  &kp RET         &slt FUNC TAB   &slt NUMN SPACE  &to MOUS       &none           &none
+                                            &none           &none           &to BASE        &slt SYMB BSPC  &slt SYMB RET   &slt FUNC TAB   &slt NUMN SPACE  &to MOUS       &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -202,7 +209,7 @@
             &none           &trans          &kp N7          &kp N8          &kp N9          &trans                                          &to BASE        &to MOUS        &kp HOME        &kp END         &kp PAGE_UP     &none
             &none           &kp LCMD        &hm_l LALT N4   &hm_l LCTRL N5  &ihm_l LSHFT N6 &kp COMMA                                       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp PAGE_DOWN   &none
             &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &kp LG(0)       &trans          &trans          &kp COMMA       &kp DOT         &kp FSLH        &none
-                                            &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
+                                            &none           &none           &trans          &kp DEL         &trans          &trans          &trans          &trans          &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
