@@ -179,7 +179,7 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <LOWER RAISE>;
+            if-layers = <FUNC RAISE>;
             then-layer = <ADJUST>;
         };
     };
@@ -194,7 +194,7 @@
             &none           &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P           &none
             &none           &hm_l LCMD A    &hm_l LALT S    &hm_l LCTRL D   &ihm_l LSHFT F  &kp G                                           &kp H           &ihm_r RSHFT J  &hm_r RCTRL K   &hm_r LALT L    &hm_r RCMD SEMI &none
             &none           &kp Z           &kp X           &kp C           &kp V           &kp B           &td_media       &none           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &none
-                                            &none           &none           &kp ESC         &slt RAISE BSPC &kp RET         &slt FUNC TAB   &slt LOWER SPACE &kp DEL        &none           &none
+                                            &none           &none           &kp ESC         &slt RAISE BSPC &kp RET         &slt FUNC TAB   &slt LOWER SPACE &to MOUSE      &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -207,7 +207,7 @@
             &none           &to_base_kp Q   &to_base_kp W   &to_base_kp E   &to_base_kp R   &to_base_kp T                                   &to_base_kp Y   &to_base_kp U   &mkp MB3          &to_base_kp O   &to_base_kp P    &none
             &none           &hm_l_b LCMD A  &hm_l_b LALT S  &hm_l_b LCTRL D &ihm_l_b LSHFT F &to_base_kp G                                  &mkp MB4        &mkp MB1        &l_mkp SCRL MB3   &mkp MB2        &mkp MB5         &none
             &none           &to_base_kp Z   &to_base_kp X   &to_base_kp C   &to_base_kp V   &to_base_kp B   &trans          &none           &to_base_kp N   &to_base_kp M   &to_base_kp COMMA &to_base_kp DOT &to_base_kp FSLH &none
-                                            &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none             &none
+                                            &none           &none           &to BASE        &trans          &trans          &to BASE        &trans          &trans          &none             &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -255,7 +255,7 @@
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
             &none           &kp F12         &kp F7          &kp F8          &kp F9          &trans                                          &trans          &kp C_VOL_UP    &kp C_BRI_INC   &trans          &trans          &none
-            &none           &kp F11         &kp F4          &kp F5          &kp F6          &kp RALT                                        &trans          &kp C_VOL_DN    &kp C_BRI_DEC   &trans          &trans          &none
+            &none           &kp F11         &kp F4          &kp F5          &kp F6          kp RALT                                        &trans          &kp C_VOL_DN    &kp C_BRI_DEC   &trans          &trans          &none
             &none           &kp F10         &kp F1          &kp F2          &kp F3          &kp PAUSE_BREAK &trans          &trans          &trans          &kp C_PREV      &kp C_PLAY      &kp C_NEXT      &trans          &none
                                             &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
             >;
