@@ -85,7 +85,7 @@
             bindings = <&kp Q>, <&kp ESC>;
         };
 
-        hml : homerow_mod_left {
+        hml: homerow_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -109,7 +109,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        ihml : hrm_index_l {
+        ihml: hrm_index_l {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
