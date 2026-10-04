@@ -62,11 +62,6 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        auto_mouse {
-            layers = <BASE>;
-            input-processors = <&zip_temp_layer MOUS 300>;
-        };
-
         scroll_view {
             layers = <SCRL>;
             input-processors = <&zip_xy_scaler 1 16>,
