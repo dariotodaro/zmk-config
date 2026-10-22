@@ -78,13 +78,6 @@
             bindings = <&kp C_PLAY>, <&kp C_NEXT>, <&kp C_PREV>;
         };
 
-        td_q: tap_dance_q {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp Q>, <&kp ESC>;
-        };
-
         hml: homerow_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
