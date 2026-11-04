@@ -206,7 +206,7 @@
             &none           &kp_b Q         &kp_b W         &kp_b E         &kp_b R         &kp_b T                                         &kp_b Y         &kp_b U         &mkp MB3        &kp_b O         &kp_b P         &none
             &none           &hml_b LCMD A   &hml_b LALT S   &hml_b LCTRL D  &ihml_b LSHFT F &kp_b G                                         &mkp MB4        &mkp MB1        &l_mkp SCRL MB3 &mkp MB2        &mkp MB5        &none
             &none           &kp_b Z         &kp_b X         &kp_b C         &kp_b V         &kp_b B         &trans          &none           &kp_b N         &kp_b M         &kp_b COMMA     &kp_b DOT       &kp_b FSLH      &none
-                                            &none           &none           &trans          &trans          &trans          &to BASE        &trans          &trans          &none           &none
+                                            &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
