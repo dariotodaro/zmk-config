@@ -148,7 +148,7 @@
         kp_b: to_base_key_press {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to BASE>, <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>;
+            bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>, <&to BASE>;
         };
 
         hml_b: hrm_left_exit_mouse {
