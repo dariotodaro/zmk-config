@@ -44,37 +44,15 @@
             key-positions = <28 31>;
             bindings = <&caps_word>;
         };
-
-        // Mouse Buttons
-        combo_mkback {
-            timeout-ms = <50>;
-            key-positions = <18 30>;
-            bindings = <&mkp MB4>;
-        };
-        combo_mkleft {
+        combo_mous {
             timeout-ms = <50>;
             key-positions = <19 31>;
-            bindings = <&mkp LCLK>;
+            bindings = <&to MOUS>;
         };
-        combo_scrllayer {
+        combo_base {
             timeout-ms = <50>;
             key-positions = <20 32>;
-            bindings = <&l_mkp SCRL MCLK>;
-        };
-        combo_mkright {
-            timeout-ms = <50>;
-            key-positions = <21 33>;
-            bindings = <&mkp RCLK>;
-        };
-        combo_mkfrw {
-            timeout-ms = <50>;
-            key-positions = <22 34>;
-            bindings = <&mkp MB5>;
-        };
-        combo_mkmiddle {
-            timeout-ms = <50>;
-            key-positions = <32 46>;
-            bindings = <&mkp MCLK>;
+            bindings = <&to BASE>;
         };
     };
 
@@ -203,9 +181,9 @@
             display-name = "mous";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-            &none           &kp_b Q         &kp_b W         &kp_b E         &kp_b R         &kp_b T                                         &kp_b Y         &kp_b U         &mkp MB3        &kp_b O         &kp_b P         &none
+            &none           &kp_b Q         &kp_b W         &kp_b E         &kp_b R         &kp_b T                                         &kp_b Y         &kp_b U         &kp_b I         &kp_b O         &kp_b P         &none
             &none           &hml_b LCMD A   &hml_b LALT S   &hml_b LCTRL D  &ihml_b LSHFT F &kp_b G                                         &mkp MB4        &mkp MB1        &l_mkp SCRL MB3 &mkp MB2        &mkp MB5        &none
-            &none           &kp_b Z         &kp_b X         &kp_b C         &kp_b V         &kp_b B         &trans          &none           &kp_b N         &kp_b M         &kp_b COMMA     &kp_b DOT       &kp_b FSLH      &none
+            &none           &kp_b Z         &kp_b X         &kp_b C         &kp_b V         &kp_b B         &trans          &none           &kp_b N         &kp_b M         &mkp MB3        &kp_b DOT       &kp_b FSLH      &none
                                             &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
             >;
 
