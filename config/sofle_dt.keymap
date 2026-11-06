@@ -50,7 +50,6 @@
             timeout-ms = <50>;
             key-positions = <19 31>;
             bindings = <&mkp LCLK>;
-            bindings = <&to MOUS>;
         };
         combo_scrllayer {
             timeout-ms = <50>;
