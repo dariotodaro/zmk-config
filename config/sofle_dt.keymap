@@ -44,15 +44,28 @@
             key-positions = <28 31>;
             bindings = <&caps_word>;
         };
-        combo_mous {
+
+        // Mouse Buttons
+        combo_mkleft {
             timeout-ms = <50>;
             key-positions = <19 31>;
+            bindings = <&mkp LCLK>;
             bindings = <&to MOUS>;
         };
-        combo_base {
+        combo_scrllayer {
             timeout-ms = <50>;
             key-positions = <20 32>;
-            bindings = <&to BASE>;
+            bindings = <&l_mkp SCRL MCLK>;
+        };
+        combo_mkright {
+            timeout-ms = <50>;
+            key-positions = <21 33>;
+            bindings = <&mkp RCLK>;
+        };
+        combo_mkmiddle {
+            timeout-ms = <50>;
+            key-positions = <32 46>;
+            bindings = <&mkp MCLK>;
         };
     };
 
@@ -140,7 +153,7 @@
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
             &none           &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P           &none
-            &none           &hml  LCMD A    &hml  LALT S    &hml  LCTRL D   &ihml  LSHFT F  &kp G                                           &kp H           &ihmr RSHFT J   &hmr RCTRL K    &hmr LALT L     &hmr RCMD SEMI  &none
+            &none           &hml LCMD A     &hml LALT S     &hml LCTRL D    &ihml LSHFT F   &kp G                                           &kp H           &ihmr RSHFT J   &hmr RCTRL K    &hmr LALT L     &hmr RCMD SEMI  &none
             &none           &kp Z           &kp X           &kp C           &kp V           &kp B           &kp C_PLAY      &none           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &none
                                             &none           &none           &kp ESC         &slt SYMB BSPC  &slt SYMB RET   &slt FUNC TAB   &slt NUMN SPACE &kp DEL         &none           &none
             >;
@@ -152,9 +165,9 @@
             display-name = "mous";
             bindings = <
             &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-            &none           &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &none
-            &none           &trans          &trans          &trans          &trans          &trans                                          &mkp MB4        &mkp MB1        &l_mkp SCRL MB3 &mkp MB2        &mkp MB5        &none
-            &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &trans          &trans          &mkp MB3        &trans          &trans          &none
+            &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
+            &none           &kp LCMD        &kp LALT        &kp LCTRL       &kp LSHFT       &none                                           &mkp MB4        &mkp MB1        &l_mkp SCRL MB3 &mkp MB2        &mkp MB5        &none
+            &none           &none           &none           &none           &none           &none           &trans          &none           &none           &none           &none           &none           &none           &none
                                             &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
             >;
 
