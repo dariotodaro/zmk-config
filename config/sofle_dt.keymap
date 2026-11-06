@@ -191,7 +191,7 @@
             &none           &trans          &kp N7          &kp N8          &kp N9          &trans                                          &trans          &to BASE        &kp HOME        &kp END         &kp PAGE_UP     &none
             &none           &kp LCMD        &hml  LALT N4   &hml  LCTRL N5  &ihml  LSHFT N6 &kp COMMA                                       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp PAGE_DOWN   &none
             &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp DOT         &trans          &none           &trans          &to MOUS        &trans          &trans          &trans          &none
-                                            &none           &none           &trans          &kp DEL         &trans          &trans          &trans          &trans          &none           &none
+                                            &none           &none           &trans          &trans          &trans          &trans          &trans          &trans          &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
