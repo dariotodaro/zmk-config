@@ -46,6 +46,11 @@
         };
 
         // Mouse Buttons
+        combo_mkback {
+            timeout-ms = <50>;
+            key-positions = <18 30>;
+            bindings = <&mkp MB4>;
+        };
         combo_mkleft {
             timeout-ms = <50>;
             key-positions = <19 31>;
@@ -60,6 +65,11 @@
             timeout-ms = <50>;
             key-positions = <21 33>;
             bindings = <&mkp RCLK>;
+        };
+        combo_mkfrw {
+            timeout-ms = <50>;
+            key-positions = <22 34>;
+            bindings = <&mkp MB5>;
         };
         combo_mkmiddle {
             timeout-ms = <50>;
