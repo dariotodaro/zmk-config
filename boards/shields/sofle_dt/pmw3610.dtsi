@@ -70,7 +70,7 @@
         };
 
         snipe_view {
-            layers = <RAISE>;
+            layers = <SYMB>;
             input-processors = <&zip_xy_scaler 1 3>;
         };
     };
